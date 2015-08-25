@@ -1,0 +1,2 @@
+ecretfile filter=git-crypt diff=git-crypt
+/zsh/ssh.zsh filter=git-crypt diff=git-crypt

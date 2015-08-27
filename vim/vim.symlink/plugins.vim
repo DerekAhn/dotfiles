@@ -115,7 +115,7 @@ call plug#end()
 """"""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "left"
 let NERDTreeIgnore = ['\.js.map$', '\.DS_Store$']
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=25
 map <C-e> :NERDTreeToggle<CR>
 
 
@@ -192,11 +192,7 @@ let g:ctrlsf_indent = 2
 """"""""""""""""""""""""""""""
 let g:airline#extensions#branch#displayed_head_limit = 10
 let g:airline_powerline_fonts = 1
-if has("gui_running")
-  let g:airline_theme="luna"
-else
-  let g:airline_theme="gotham"
-endif
+let g:airline_theme="badwolf"
 
 " Automatically truncate sections
 let g:airline#extensions#default#section_truncate_width = {

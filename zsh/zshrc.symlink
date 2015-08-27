@@ -5,7 +5,9 @@ export zsh=$DOTFILES/zsh
 for config ($zsh/**/*.zsh) source $config
 
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="geoffgarside"
+#ZSH_THEME="tjkirch"
+ZSH_THEME="juanghurtado"
+
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx npm sublime ruby rails rvm jump)

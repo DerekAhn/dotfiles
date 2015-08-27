@@ -19,7 +19,7 @@ source ~/.vim/plugins.vim
 " Show current line number
 set number
 " Show relative line numbers
-" set relativenumber
+set relativenumber
 
 " Highlight cursor current line
 set cursorline

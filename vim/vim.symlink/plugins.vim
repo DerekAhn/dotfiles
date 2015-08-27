@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Color Scheme for Vim
+Plug 'chriskempson/base16-vim'
+
 " Emmet for vim
 Plug 'mattn/emmet-vim'
 
@@ -131,6 +134,15 @@ let g:instant_markdown_autostart = 0
 """"""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled=1
 
+""""""""""""""""""""""""""""""
+" Ctrlp
+""""""""""""""""""""""""""""""
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  'node_modules', 'bower_components', '.git'
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links'
+}
+
 
 """"""""""""""""""""""""""""""
 " undotree
@@ -144,6 +156,7 @@ if has("persistent_undo")
   set undodir='~/.undodir/'
   set undofile
 endif
+
 
 
 """"""""""""""""""""""""""""""

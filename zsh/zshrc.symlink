@@ -45,3 +45,4 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 source /Users/reptar/.iterm2_shell_integration.zsh
+export PATH="/usr/local/sbin:$PATH"

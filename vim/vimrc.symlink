@@ -41,7 +41,6 @@ map <leader>e :e! ~/.vimrc<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => COLORS AND FONTS
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
 " Enable syntax highlighting
 syntax enable
 
@@ -217,6 +216,7 @@ vnoremap <silent> * :call VisualSelection('f', '')<CR>
 vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => MOVING AROUND
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -307,9 +307,14 @@ map <leader>s? z=
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)"
 
 " Exit insert mode with `jk`
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 " Fast saving
 nmap <leader>w :w!<cr>

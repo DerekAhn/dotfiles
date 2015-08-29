@@ -4,14 +4,17 @@
 
 call plug#begin('~/.vim/plugged')
 
-" Color Scheme for Vim
-Plug 'chriskempson/base16-vim'
+" Alignment for vim
+Plug 'junegunn/vim-easy-align'
 
 " Emmet for vim
 Plug 'mattn/emmet-vim'
 
 " Ctrlp.vim
 Plug 'kien/ctrlp.vim'
+
+" Code completion
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh'  }
 
 " Code search and view tool
 Plug 'dyng/ctrlsf.vim'
@@ -134,15 +137,6 @@ let g:instant_markdown_autostart = 0
 """"""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled=1
 
-""""""""""""""""""""""""""""""
-" Ctrlp
-""""""""""""""""""""""""""""""
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  'node_modules', 'bower_components', '.git'
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links'
-}
-
 
 """"""""""""""""""""""""""""""
 " undotree
@@ -157,6 +151,12 @@ if has("persistent_undo")
   set undofile
 endif
 
+
+""""""""""""""""""""""""""""""
+" ctrp
+""""""""""""""""""""""""""""""
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git'
 
 
 """"""""""""""""""""""""""""""

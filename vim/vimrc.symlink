@@ -44,7 +44,7 @@ map <leader>e :e! ~/.vimrc<cr>
 " Enable syntax highlighting
 syntax enable
 
-set background=dark
+" set background=dark
 
 " Theme, Colorscheme, & Font
 if has("gui_running")

@@ -215,3 +215,11 @@ let g:airline#extensions#default#section_truncate_width = {
   \ 'z': 50,
   \ 'warning': 50,
   \ }
+
+""""""""""""""""""""""""""""""
+" Ultisnips
+""""""""""""""""""""""""""""""
+" Trigger configuration
+let g:UltiSnipsExpandTrigger="<C-Space>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"

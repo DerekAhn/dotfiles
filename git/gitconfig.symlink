@@ -16,9 +16,12 @@
   excludesfile = ~/.gitignore_global
   editor = vim
 [merge]
-  tool = kdiff3
-[mergetool "kdiff3"]
-  path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+  tool = Kaleidoscope
+[mergetool "Kaleidoscope"]
+  path = /Applications/Kaleidoscope.app/Contents/MacOS/Kaleidoscope
+[mergetool]
+  keepBackup = true
+  prompt = false
 [push]
   default = simple
 [mergetool]

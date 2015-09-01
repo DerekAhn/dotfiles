@@ -1,8 +1,10 @@
 [user]
   name = Derek Ahn
-  email = derek@sudokrew.com
+  email = d3rekahn@gmail.com
 [github]
   user = DerekAhn
+[bitbucket]
+  user= DataDerek
 [color]
   diff = auto
   status = auto

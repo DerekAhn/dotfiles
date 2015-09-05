@@ -4,15 +4,15 @@
 
 # Create a new directory and enter it
 function md() {
-  mkdir -p "$@" && cd "$@"
+  mkdir -p "$@" && cd "$@";
 }
 
 function 7zip() {
-  tar cf - "$@" | 7za a -si "$@".tar.7z
+  tar cf - "$@" | 7za a -si "$@".tar.7z;
 }
 
 function 7unzip() {
-  7za x -so "$@" | tar xf -
+  7za x -so "$@" | tar xf -;
 }
 
 function hist() {

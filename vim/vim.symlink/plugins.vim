@@ -106,6 +106,9 @@ Plug 'ryanoasis/vim-devicons'
 " Search Dash from vim
 Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 
+" Add syntax for react.js
+Plug 'mxw/vim-jsx'
+
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 

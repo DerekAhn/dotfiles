@@ -355,6 +355,10 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
+" Resizing Panes
+map <silent> ¬ :vertical resize -2<CR>
+map <silent> ˙ :vertical resize +2<CR>
+
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 

@@ -5,6 +5,8 @@
   user = DerekAhn
 [bitbucket]
   user = DataDerek
+[branch]
+  mergeoptions = --no-ff
 [color]
   diff = auto
   status = auto

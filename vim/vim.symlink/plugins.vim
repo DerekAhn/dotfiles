@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Color Scheme
+Plug 'NLKNguyen/papercolor-theme'
+
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 

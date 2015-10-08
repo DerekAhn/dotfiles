@@ -9,6 +9,7 @@ alias listDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Qu
 alias clearDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias wifiHistory="defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences |grep LastConnected -A 7"
 alias metasploit="cd /usr/local/share/metasploit-framework"
+alias metasploit="cd /usr/local/share/metasploit-framework"
 
 
 # Helpers
@@ -18,6 +19,10 @@ alias du='du -h -c' # calculate disk usage for a folder
 
 # Applications
 alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
+
+# Copy Public Key to Clipboard
+alias catPubKey='cat ~/.ssh/id_rsa.pub'
+alias getPubKey='cat ~/.ssh/id_rsa.pub | pbcopy'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

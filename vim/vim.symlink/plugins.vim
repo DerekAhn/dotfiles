@@ -25,8 +25,11 @@ Plug 'dyng/ctrlsf.vim'
 " Tree explorer for vim.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
+" Jade syntax
+Plug 'NLKNguyen/papercolor-theme'
+
 " Syntax checking
-Plug 'scrooloose/syntastic'
+Plug 'digitaltoad/vim-jade'
 
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'

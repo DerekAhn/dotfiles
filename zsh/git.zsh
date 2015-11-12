@@ -1,6 +1,7 @@
 # Git Aliases
 alias gf="git fetch"
-alias ugp="git reset HEAD@{1}"
+alias ugc="git reset HEAD@{1}"
+alias ugp="git reset --hard HEAD~1 && git push -f"
 
 # Git-Crypt
 alias gcrypt-init="git-crypt init"

@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/reptar/Desktop/projects/rocketcom-cms'
 let g:netrw_dirhist_2='/Users/reptar/Desktop/projects'
 let g:netrw_dirhist_3='/Users/reptar/Desktop/projects/rocketcom-cms'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/reptar/.dotfiles/vim'
 let g:netrw_dirhist_6='/'
 let g:netrw_dirhist_7='/Users/reptar/.dotfiles'
 let g:netrw_dirhist_8='/Users/reptar/.dotfiles/zsh'
+let g:netrw_dirhist_9='/Users/reptar/Desktop/projects/revolusun/revolusun-crm/src/components'

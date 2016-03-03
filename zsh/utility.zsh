@@ -10,6 +10,7 @@ alias clearDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Q
 alias wifiHistory="defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences |grep LastConnected -A 7"
 alias metasploit="cd /usr/local/share/metasploit-framework"
 alias metasploit="cd /usr/local/share/metasploit-framework"
+alias gstats="t shortlog -s -n"
 
 
 # Helpers

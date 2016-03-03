@@ -7,6 +7,15 @@ call plug#begin('~/.vim/plugged')
 " Color Scheme
 Plug 'NLKNguyen/papercolor-theme'
 
+" Syntax checking hacks for vim
+Plug 'scrooloose/syntastic'
+
+" Speed dating
+Plug 'tpope/vim-speeddating'
+
+" Org mode
+Plug 'jceb/vim-orgmode'
+
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 
@@ -232,3 +241,8 @@ let g:airline#extensions#default#section_truncate_width = {
 let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+
+""""""""""""""""""""""""""""""
+" Syntastic
+""""""""""""""""""""""""""""""
+let g:syntastic_javascript_checkers = ['eslint']

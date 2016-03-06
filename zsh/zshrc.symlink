@@ -8,10 +8,6 @@ for config ($zsh/**/*.zsh) source $config
 #ZSH_THEME="tjkirch"
 ZSH_THEME="juanghurtado"
 
-
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git osx npm sublime ruby rails rvm jump)
-
 # Tmux configs
 export EDITOR='vim'
 #source ~/.bin/tmuxinator.zsh
@@ -34,15 +30,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export NVM_DIR="/Users/reptar/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source ~/.rvm/scripts/rvm
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 source /Users/reptar/.iterm2_shell_integration.zsh
 export PATH="/usr/local/sbin:$PATH"

@@ -1,7 +1,9 @@
 export DOTFILES=$HOME/.dotfiles
 export zsh=$DOTFILES/zsh
 
-# load all zsh config files
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git osx npm sublime ruby rails rvm jump)
+
 for config ($zsh/**/*.zsh) source $config
 
 # Look in ~/.oh-my-zsh/themes/

@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" A collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
+
 " Color Scheme
 Plug 'NLKNguyen/papercolor-theme'
 
@@ -22,8 +25,8 @@ Plug 'junegunn/vim-easy-align'
 " Emmet for vim
 Plug 'mattn/emmet-vim'
 
-" Ctrlp.vim
-Plug 'kien/ctrlp.vim'
+" Fuzzy file, buffer, mru, tag, etc finder.
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Code completion
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh'  }
@@ -44,7 +47,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'jlanzarotta/bufexplorer'
 
 " Lean & mean status/tabline
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'

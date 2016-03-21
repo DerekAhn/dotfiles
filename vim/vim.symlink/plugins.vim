@@ -4,6 +4,13 @@
 
 call plug#begin('~/.vim/plugged')
 
+" fzf :heart: vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" Go development plugin for Vim
+Plug 'fatih/vim-go'
+
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 

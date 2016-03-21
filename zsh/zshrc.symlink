@@ -21,11 +21,10 @@ source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Go Lang
-export GOPATH=~/Desktop/projects/golang
-
-go() { cd ~/Desktop/projects/$1; }
-_go() { _files -W ~/Desktop/projects -/; }
-compdef _go go
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 . `brew --prefix`/etc/profile.d/z.sh alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -35,3 +34,5 @@ export NVM_DIR="/Users/reptar/.nvm"
 
 source /Users/reptar/.iterm2_shell_integration.zsh
 export PATH="/usr/local/sbin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -22,12 +22,11 @@
 [mergetool "Kaleidoscope"]
   path = /Applications/Kaleidoscope.app/Contents/MacOS/Kaleidoscope
 [mergetool]
-  keepBackup = true
   prompt = false
 [push]
   default = simple
 [mergetool]
-  keepBackup = true
+	keepBackup = false
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f

@@ -402,6 +402,10 @@ nnoremap Q @q
 " Switch between the last two files
 nnoremap <leader><leader> <C-^>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" => AUTOMATICALLY RECOGNIZE FILETYPES BY EXTENSION
+""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile .{babel,eslint,stylelint}rc set filetype=json
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => HELPER FUNCTIONS

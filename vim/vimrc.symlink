@@ -77,6 +77,8 @@ set ffs=unix,dos,mac
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => USER INTERFACE
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" fzf is a general-purpose command-line fuzzy finder.
+set rtp+=/usr/local/opt/fzf
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -373,7 +375,7 @@ map <leader>r :e<cr>
 
 " Quick Open Notes
 " Directory to notes folder
-let g:notes_folder = '~/Desktop/Notes/'
+let g:notes_folder = '~/Desktop/Projects/Notes/'
 " Project specific notes
 let g:notes = g:notes_folder . fnamemodify(getcwd(), ':t') . '.md'
 let g:note_size = 15

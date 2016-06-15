@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" Vim plugin for metrics, insights, and time tracking automatically generated from your programming activity. https://wakatime.com
+Plug 'wakatime/vim-wakatime'
+
 " fzf :heart: vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'

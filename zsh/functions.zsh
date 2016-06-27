@@ -1,12 +1,6 @@
 ####################
 # functions
 ####################
-# Pull forked remote
-function pullSudokrew() {
-  echo "git pull git@bitbucket.org:sudokrew/$1.git" $2;
-  git pull "git@bitbucket.org:sudokrew/$1.git" $2;
-}
-
 # Create a new directory and enter it
 function md() {
   mkdir -p "$@" && cd "$@";

@@ -11,6 +11,9 @@ alias wifiHistory="defaults read /Library/Preferences/SystemConfiguration/com.ap
 alias metasploit="cd /usr/local/share/metasploit-framework"
 alias metasploit="cd /usr/local/share/metasploit-framework"
 
+# Clear terminal files
+alias terminal-clean='sudo rm -f /private/var/log/asl/*.asl'
+
 # Helpers
 alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes

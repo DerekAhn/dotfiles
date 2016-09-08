@@ -27,9 +27,35 @@ export PATH=$PATH:$GOROOT/bin
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
+brew doctor
+brew install ack
+brew install autoconf
+brew install automake
+brew install calc
+brew install ccrypt
+brew install cmake
+brew install cscope
+brew install hh
+brew install htop
 brew install go
-brew install git
-brew install mercurial
+brew install macvim
+brew install nmap
+brew install node
+brew install openssl
+brew install p7zip
+brew install postgresql
+brew install python
+brew install readline
+brew install reattach-to-user-namespace
+brew install ruby
+brew install speedtest_cli
+brew install the_silver_searcher
+brew install tmux
+brew install vim
+brew install wget
+brew install xz
+brew install z
+brew install zsh-syntax-highlighting
 
 go get golang.org/x/tools/cmd/godoc
 go get golang.org/x/tools/cmd/vet

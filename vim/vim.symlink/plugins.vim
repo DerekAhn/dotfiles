@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" List of JavaScript ES6 snippets and syntax highlighting for vim. http://www.vim.org/scripts/script.php?script_id=5230
+Plug 'isRuslan/vim-es6'
+
 " Vim plugin for metrics, insights, and time tracking automatically generated from your programming activity. https://wakatime.com
 Plug 'wakatime/vim-wakatime'
 

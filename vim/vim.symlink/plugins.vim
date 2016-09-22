@@ -7,13 +7,6 @@ call plug#begin('~/.vim/plugged')
 " List of JavaScript ES6 snippets and syntax highlighting for vim. http://www.vim.org/scripts/script.php?script_id=5230
 Plug 'isRuslan/vim-es6'
 
-" Vim plugin for metrics, insights, and time tracking automatically generated from your programming activity. https://wakatime.com
-Plug 'wakatime/vim-wakatime'
-
-" fzf :heart: vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
@@ -53,9 +46,6 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Jade syntax
 Plug 'NLKNguyen/papercolor-theme'
 
-" Syntax checking
-Plug 'digitaltoad/vim-jade'
-
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'
 
@@ -76,12 +66,6 @@ Plug 'plasticboy/vim-markdown'
 
 " Enable repeating supported plugin maps
 Plug 'tpope/vim-repeat'
-
-" Ultimate snippet solution
-Plug 'SirVer/ultisnips'
-
-" Snippet files for various programming languages
-Plug 'honza/vim-snippets'
 
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -110,9 +94,6 @@ Plug 'easymotion/vim-easymotion'
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
-" Instant Markdown previews
-Plug 'suan/vim-instant-markdown'
-
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript'
 
@@ -122,9 +103,6 @@ Plug 'jelera/vim-javascript-syntax'
 " Sublime Text style multiple selections
 Plug 'terryma/vim-multiple-cursors'
 
-" Mustache and handlebars mode for vim
-Plug 'mustache/vim-mustache-handlebars'
-
 " Paste in Vim with indentation adjusted to destination context
 Plug 'sickill/vim-pasta'
 
@@ -133,9 +111,6 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
-
-" Search Dash from vim
-Plug 'rizzatti/dash.vim', { 'on': 'Dash' }
 
 " Add syntax for react.js
 Plug 'mxw/vim-jsx'

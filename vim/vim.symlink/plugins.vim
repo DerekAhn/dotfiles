@@ -5,7 +5,7 @@
 call plug#begin('~/.vim/plugged')
 
 " List of JavaScript ES6 snippets and syntax highlighting for vim. http://www.vim.org/scripts/script.php?script_id=5230
-Plug 'isRuslan/vim-es6'
+" Plug 'isRuslan/vim-es6'
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go'

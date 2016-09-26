@@ -247,3 +247,19 @@ let g:UltiSnipsExpandTrigger="<C-Space>"
 " Syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_javascript_checkers = ['eslint']
+
+""""""""""""""""""""""""""""""
+" Vim Orgmode
+""""""""""""""""""""""""""""""
+let g:org_export_emacs="/usr/local/bin/emacs"
+let g:org_agenda_files = ['~/Desktop/Notes/daily-notes.org']
+let g:org_todo_keywords = ['TODO', '|', 'DONE']
+let g:org_aggressive_conceal = 1
+
+
+""""""""""""""""""""""""""""""
+" vim-jsx
+""""""""""""""""""""""""""""""
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+

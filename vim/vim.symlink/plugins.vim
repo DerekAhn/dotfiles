@@ -134,8 +134,11 @@ let g:indentLine_color_term = 239
 """"""""""""""""""""""""""""""
 " NERDTree
 """"""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "left"
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.js.map$', '\.DS_Store$']
+let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize=25
 map <C-e> :NERDTreeToggle<CR>
 

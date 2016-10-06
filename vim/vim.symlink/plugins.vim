@@ -7,6 +7,12 @@ call plug#begin('~/.vim/plugged')
 " List of JavaScript ES6 snippets and syntax highlighting for vim. http://www.vim.org/scripts/script.php?script_id=5230
 " Plug 'isRuslan/vim-es6'
 
+" vim-snipmate default snippets
+Plug 'honza/vim-snippets'
+
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
@@ -140,6 +146,8 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.js.map$', '\.DS_Store$']
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize=25
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 map <C-e> :NERDTreeToggle<CR>
 
 
@@ -239,14 +247,16 @@ let g:airline#extensions#default#section_truncate_width = {
 """"""""""""""""""""""""""""""
 " Trigger configuration
 let g:UltiSnipsExpandTrigger="<C-Space>"
-" let g:UltiSnipsJumpForwardTrigger="<Tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
 
 """"""""""""""""""""""""""""""
 " Syntastic
 """"""""""""""""""""""""""""""
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 
 """"""""""""""""""""""""""""""
 " Vim Orgmode
@@ -255,6 +265,8 @@ let g:org_export_emacs="/usr/local/bin/emacs"
 let g:org_agenda_files = ['~/Desktop/Notes/daily-notes.org']
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
 let g:org_aggressive_conceal = 1
+" Another issue with vim-go and syntastic is that the location list window that contains the output of commands such as :GoBuild and :GoTest might not appear. To resolve this:
+let g:go_list_type = "quickfix"
 
 
 """"""""""""""""""""""""""""""

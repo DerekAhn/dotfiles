@@ -37,5 +37,6 @@ export NVM_DIR="/Users/reptar/.nvm"
 
 source /Users/reptar/.iterm2_shell_integration.zsh
 export PATH="/usr/local/sbin:$PATH"
+eval "$(thefuck --alias)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -2,6 +2,8 @@
 
 echo "Installing dotfiles"
 
-source install/link.sh
+# conditional to run just link
+# source install/link.sh
+source install/all.sh
 
 echo "Done."

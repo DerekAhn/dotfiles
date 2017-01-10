@@ -17,7 +17,7 @@ echo "Please enter your github username (ex: vsouza) :"
 read user
 
 mkdir $gopath
-mkdir -p $gopath/src/github.com/$user
+mkdir -p $HOME/$gopath/src/github.com/$user
 
 export GOPATH=$gopath
 export GOROOT=/usr/local/opt/go/libexec

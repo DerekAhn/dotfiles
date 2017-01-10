@@ -4,9 +4,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-" List of JavaScript ES6 snippets and syntax highlighting for vim. http://www.vim.org/scripts/script.php?script_id=5230
-" Plug 'isRuslan/vim-es6'
-
 " vim-snipmate default snippets
 Plug 'honza/vim-snippets'
 
@@ -21,9 +18,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Color Scheme
 Plug 'NLKNguyen/papercolor-theme'
-
-" Syntax checking hacks for vim
-Plug 'scrooloose/syntastic'
 
 " Speed dating
 Plug 'tpope/vim-speeddating'
@@ -49,9 +43,6 @@ Plug 'dyng/ctrlsf.vim'
 " Tree explorer for vim.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
-" Jade syntax
-Plug 'NLKNguyen/papercolor-theme'
-
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'
 
@@ -63,12 +54,6 @@ Plug 'tpope/vim-commentary'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
-
-" SCSS syntax highlighting
-Plug 'cakebaker/scss-syntax.vim'
-
-" Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown'
 
 " Enable repeating supported plugin maps
 Plug 'tpope/vim-repeat'
@@ -88,23 +73,11 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Preview colors in source code
 Plug 'ap/vim-css-color'
 
-" CSS3 syntax support
-Plug 'hail2u/vim-css3-syntax'
-
-" Vim Workspace Controller
-Plug 'szw/vim-ctrlspace'
-
 " Vim motions on speed
 Plug 'easymotion/vim-easymotion'
 
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
-
-" Javascript indentation and syntax support
-Plug 'pangloss/vim-javascript'
-
-" Enhanced javascript syntax
-Plug 'jelera/vim-javascript-syntax'
 
 " Sublime Text style multiple selections
 Plug 'terryma/vim-multiple-cursors'
@@ -115,14 +88,41 @@ Plug 'sickill/vim-pasta'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
+" Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
+
+" Formats javascript files by js-beautify
+Plug 'maksimr/vim-jsbeautify'
+
+
+" ### SYNTAXES ###
+
+" Syntax checking hacks for vim
+Plug 'scrooloose/syntastic'
+
+" Enhanced javascript syntax
+Plug 'jelera/vim-javascript-syntax'
+
+" Javascript indentation and syntax support
+Plug 'pangloss/vim-javascript'
+
+" CSS3 syntax support
+Plug 'hail2u/vim-css3-syntax'
+
+" SCSS syntax highlighting
+Plug 'cakebaker/scss-syntax.vim'
+
+" Markdown syntax highlighting
+Plug 'plasticboy/vim-markdown'
 
 " Add syntax for react.js
 Plug 'mxw/vim-jsx'
 
-" Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
+" Add syntax for Ace templates
+Plug 'yosssi/vim-ace'
 
 call plug#end()
 
@@ -275,3 +275,11 @@ let g:go_list_type = "quickfix"
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 
+""""""""""""""""""""""""""""""
+" vim-jsbeautify
+""""""""""""""""""""""""""""""
+autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
+autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
+autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
+autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
+autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>

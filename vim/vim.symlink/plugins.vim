@@ -4,15 +4,6 @@
 
 call plug#begin('~/.vim/plugged')
 
-" vim-snipmate default snippets
-Plug 'honza/vim-snippets'
-
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
-
-" Go development plugin for Vim
-Plug 'fatih/vim-go'
-
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 
@@ -27,9 +18,6 @@ Plug 'jceb/vim-orgmode'
 
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
-
-" Emmet for vim
-Plug 'mattn/emmet-vim'
 
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'ctrlpvim/ctrlp.vim'
@@ -97,11 +85,27 @@ Plug 'ryanoasis/vim-devicons'
 " Formats javascript files by js-beautify
 Plug 'maksimr/vim-jsbeautify'
 
+" Search Dash.app from Vim
+Plug 'rizzatti/dash.vim'
+
 
 " ### SYNTAXES ###
 
+
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
+" vim-snipmate default snippets
+Plug 'honza/vim-snippets'
+
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
 " Syntax checking hacks for vim
 Plug 'scrooloose/syntastic'
+
+" Go development plugin for Vim
+Plug 'fatih/vim-go'
 
 " Enhanced javascript syntax
 Plug 'jelera/vim-javascript-syntax'

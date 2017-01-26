@@ -112,12 +112,15 @@ bind -n C-k if-shell "$is_vim" "send-keys C-k" "select-pane -U"
 bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
 bind -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
+# Tmux is automatically started after the computer/server is turned on.
+set -g @continuum-boot 'on'
 
 ##############################
 # => PLUGINS
 ##############################
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
 
 # Initialize TMUX plugin manager
 run '~/.tmux/plugins/tpm/tpm'

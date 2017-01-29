@@ -266,7 +266,7 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
 " Vim Orgmode
 """"""""""""""""""""""""""""""
 let g:org_export_emacs="/usr/local/bin/emacs"
-let g:org_agenda_files = ['~/Projects/Notes/daily-notes.org']
+let g:org_agenda_files = ['~/Projects/notes/daily-notes.org']
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
 let g:org_aggressive_conceal = 1
 " Another issue with vim-go and syntastic is that the location list window that contains the output of commands such as :GoBuild and :GoTest might not appear. To resolve this:

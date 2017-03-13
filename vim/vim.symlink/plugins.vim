@@ -13,9 +13,6 @@ Plug 'NLKNguyen/papercolor-theme'
 " Speed dating
 Plug 'tpope/vim-speeddating'
 
-" Org mode
-Plug 'jceb/vim-orgmode'
-
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 
@@ -261,16 +258,6 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-""""""""""""""""""""""""""""""
-" Vim Orgmode
-""""""""""""""""""""""""""""""
-let g:org_export_emacs="/usr/local/bin/emacs"
-let g:org_agenda_files = ['~/Projects/notes/daily-notes.org']
-let g:org_todo_keywords = ['TODO', '|', 'DONE']
-let g:org_aggressive_conceal = 1
-" Another issue with vim-go and syntastic is that the location list window that contains the output of commands such as :GoBuild and :GoTest might not appear. To resolve this:
-let g:go_list_type = "quickfix"
 
 
 """"""""""""""""""""""""""""""

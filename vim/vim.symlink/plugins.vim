@@ -79,10 +79,6 @@ Plug 'ryanoasis/vim-devicons'
 " Formats javascript files by js-beautify
 Plug 'maksimr/vim-jsbeautify'
 
-" Search Dash.app from Vim
-Plug 'rizzatti/dash.vim'
-
-
 " ### SYNTAXES ###
 
 

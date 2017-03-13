@@ -10,9 +10,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Color Scheme
 Plug 'NLKNguyen/papercolor-theme'
 
-" Speed dating
-Plug 'tpope/vim-speeddating'
-
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 

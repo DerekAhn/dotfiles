@@ -175,9 +175,12 @@ endif
 """"""""""""""""""""""""""""""
 " ctrp
 """"""""""""""""""""""""""""""
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
-let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git'
-
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
+" let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|bower_components$\|node_modules$\|\.DS_Store$\',
+  \ 'file': '\.so$\|\.swp$\|\.zip$\|\*/tmp/*$|\~$\',
+  \ }
 
 """"""""""""""""""""""""""""""
 " vim-easymotion

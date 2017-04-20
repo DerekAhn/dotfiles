@@ -6,6 +6,24 @@ $ ./install.sh
 ## For fonts
 [nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)
 
+## Wasavi exrc
+```vim
+" exrc for wasavi
+
+map! jj <ESC>
+set writeas=textAndBreak
+set theme=matrix
+set jkdenotative
+
+set number
+set relativenumber
+
+map <space>w :w<return>
+map <space>ww :wq<return>
+
+map H ^
+map L $
+```
 ### Copy paste into ~/.ssh/config
 - Also create a `control/`
 ```bash

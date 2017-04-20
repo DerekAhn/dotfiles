@@ -321,6 +321,10 @@ inoremap jj <ESC>
 " Fast saving
 nmap <leader>w :w!<cr>
 
+" Map movement to homerow
+map H ^
+map L $
+
 " Copy/Paste to clipboard
 map <leader>cc "+y
 map <leader>vv "+p

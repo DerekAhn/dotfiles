@@ -79,6 +79,8 @@ Plug 'maksimr/vim-jsbeautify'
 
 " ### SYNTAXES ###
 
+" Formatting code
+Plug 'sbdchd/neoformat'
 
 " Emmet for vim
 Plug 'mattn/emmet-vim'
@@ -268,3 +270,14 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+""""""""""""""""""""""""""""""
+" Neoformat
+""""""""""""""""""""""""""""""
+autocmd BufWritePre *.js Neoformat
+
+" Set up prettier config
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --trailing-comma\ all\ --print-width\ 80
+
+" Use formatprg when available
+let g:neoformat_try_formatprg = 1

@@ -61,8 +61,6 @@ Plug 'easymotion/vim-easymotion'
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
-" Sublime Text style multiple selections
-Plug 'terryma/vim-multiple-cursors'
 
 " Paste in Vim with indentation adjusted to destination context
 Plug 'sickill/vim-pasta'

@@ -412,8 +412,8 @@ nnoremap <leader><leader> <C-^>
 " => AUTOMATICALLY RECOGNIZE FILETYPES BY EXTENSION
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " For prettier
-autocmd FileType javascript set formatprg=prettier\ --stdin
-autocmd BufWritePre *.js :normal gggqG
+" autocmd FileType javascript set formatprg=prettier\ --stdin
+" autocmd BufWritePre *.js :normal gggqG
 
 autocmd BufRead,BufNewFile .{babel,eslint,stylelint}rc set filetype=json
 

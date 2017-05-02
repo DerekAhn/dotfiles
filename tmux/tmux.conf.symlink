@@ -12,7 +12,6 @@ bind C-a send-prefix
 
 # tmux display things in 256 colors
 set -g default-terminal "screen-256color"
-# set -g status-utf8 on
 
 set -g history-limit 20000
 

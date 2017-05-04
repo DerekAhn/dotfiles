@@ -118,6 +118,9 @@ Plug 'mxw/vim-jsx'
 " Add syntax for Ace templates
 Plug 'yosssi/vim-ace'
 
+" dustjs template syntax highlighting and more for vim
+Plug 'jimmyhchan/dustjs.vim'
+
 call plug#end()
 
 

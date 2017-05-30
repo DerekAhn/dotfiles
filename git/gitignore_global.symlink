@@ -42,3 +42,9 @@ Thumbs.db
 *.sassc
 .sass-cache
 
+########
+node_modules/
+
+# VIM #
+#######
+tags

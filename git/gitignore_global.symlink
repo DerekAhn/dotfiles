@@ -42,6 +42,3 @@ Thumbs.db
 *.sassc
 .sass-cache
 
-# WebStorm
-##############
-.idea

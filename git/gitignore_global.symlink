@@ -36,12 +36,12 @@
 ehthumbs.db
 Thumbs.db
 
-
 # Sass Cache #
 ##############
 *.sassc
 .sass-cache
 
+# Node #
 ########
 node_modules/
 

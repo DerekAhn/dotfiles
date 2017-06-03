@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo "Installing dotfiles"
+echo "Running... "
 
-# conditional to run just link
-# source install/link.sh
-source install/all.sh
+source exec/install.sh
 
-echo "Done."
+echo "Au pau!"

@@ -79,9 +79,6 @@ Plug 'maksimr/vim-jsbeautify'
 
 " ### SYNTAXES ###
 
-" Formatting code
-Plug 'sbdchd/neoformat'
-
 " Emmet for vim
 Plug 'mattn/emmet-vim'
 
@@ -91,14 +88,8 @@ Plug 'honza/vim-snippets'
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
-" Syntax checking hacks for vim
-Plug 'scrooloose/syntastic'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
-
-" Enhanced javascript syntax
-Plug 'jelera/vim-javascript-syntax'
 
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript'
@@ -114,9 +105,6 @@ Plug 'plasticboy/vim-markdown'
 
 " Add syntax for react.js
 Plug 'mxw/vim-jsx'
-
-" Add syntax for Ace templates
-Plug 'yosssi/vim-ace'
 
 " dustjs template syntax highlighting and more for vim
 Plug 'jimmyhchan/dustjs.vim'
@@ -149,13 +137,6 @@ map <C-e> :NERDTreeToggle<CR>
 
 
 """"""""""""""""""""""""""""""
-" vim-instant-markdown
-""""""""""""""""""""""""""""""
-let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
-
-
-""""""""""""""""""""""""""""""
 " vim markdown
 """"""""""""""""""""""""""""""
 let g:vim_markdown_folding_disabled=1
@@ -184,6 +165,7 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|bower_components$\|node_modules$\|\.DS_Store$\',
   \ 'file': '\.so$\|\.swp$\|\.zip$\|\*/tmp/*$|\~$\',
   \ }
+
 
 """"""""""""""""""""""""""""""
 " vim-easymotion
@@ -242,6 +224,7 @@ let g:airline#extensions#default#section_truncate_width = {
   \ 'warning': 50,
   \ }
 
+
 """"""""""""""""""""""""""""""
 " Ultisnips
 """"""""""""""""""""""""""""""
@@ -249,34 +232,6 @@ let g:airline#extensions#default#section_truncate_width = {
 let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-
-
-""""""""""""""""""""""""""""""
-" Syntastic
-""""""""""""""""""""""""""""""
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
-
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
 
 
 """"""""""""""""""""""""""""""
@@ -293,14 +248,3 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
-
-""""""""""""""""""""""""""""""
-" Neoformat
-""""""""""""""""""""""""""""""
-autocmd BufWritePre *.js Neoformat
-
-" Set up prettier config
-autocmd FileType javascript set formatprg=prettier\ --stdin\ --single-quote\ --trailing-comma\ all\ --print-width\ 80
-
-" Use formatprg when available
-let g:neoformat_try_formatprg = 1

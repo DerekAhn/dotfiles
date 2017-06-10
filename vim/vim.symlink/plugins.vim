@@ -4,12 +4,38 @@
 
 call plug#begin('~/.vim/plugged')
 
+
+""""""""""""""""""""""""""""""
+" Editor Config
+""""""""""""""""""""""""""""""
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
+
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
+" Tree explorer for vim.
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Color Scheme
 Plug 'NLKNguyen/papercolor-theme'
 
+" Tmux statusline generator with support for airline
+Plug 'edkolev/tmuxline.vim'
+
+" Seamless navigation between tmux panes and vim splits
+Plug 'christoomey/vim-tmux-navigator'
+
+" Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
+" Add filetype glyphs (icons)
+Plug 'ryanoasis/vim-devicons'
+
+
+""""""""""""""""""""""""""""""
+" Editor Utils
+""""""""""""""""""""""""""""""
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 
@@ -22,14 +48,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.sh'  }
 " Code search and view tool
 Plug 'dyng/ctrlsf.vim'
 
-" Tree explorer for vim.
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'
-
-" Lean & mean status/tabline
-Plug 'vim-airline/vim-airline'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
@@ -46,9 +66,6 @@ Plug 'tpope/vim-surround'
 " Display indention levels with vertical lines
 Plug 'Yggdroot/indentLine'
 
-" Tmux statusline generator with support for airline
-Plug 'edkolev/tmuxline.vim'
-
 " Undo history visualizer
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
@@ -61,53 +78,48 @@ Plug 'easymotion/vim-easymotion'
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
-
 " Paste in Vim with indentation adjusted to destination context
 Plug 'sickill/vim-pasta'
-
-" Seamless navigation between tmux panes and vim splits
-Plug 'christoomey/vim-tmux-navigator'
-
-" Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
-
-" Add filetype glyphs (icons)
-Plug 'ryanoasis/vim-devicons'
-
-" Formats javascript files by js-beautify
-Plug 'maksimr/vim-jsbeautify'
-
-" ### SYNTAXES ###
-
-" Emmet for vim
-Plug 'mattn/emmet-vim'
 
 " vim-snipmate default snippets
 Plug 'honza/vim-snippets'
 
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+
+""""""""""""""""""""""""""""""
+" Syntax support
+""""""""""""""""""""""""""""""
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
+
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
+
+" Formats javascript files by js-beautify
+Plug 'maksimr/vim-jsbeautify'
+
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript'
-
-" CSS3 syntax support
-Plug 'hail2u/vim-css3-syntax'
-
-" SCSS syntax highlighting
-Plug 'cakebaker/scss-syntax.vim'
-
-" Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown'
 
 " Add syntax for react.js
 Plug 'mxw/vim-jsx'
 
 " dustjs template syntax highlighting and more for vim
 Plug 'jimmyhchan/dustjs.vim'
+
+
+" CSS3 syntax support
+Plug 'hail2u/vim-css3-syntax'
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
+" SCSS syntax highlighting
+Plug 'cakebaker/scss-syntax.vim'
+
+" Markdown syntax highlighting
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 

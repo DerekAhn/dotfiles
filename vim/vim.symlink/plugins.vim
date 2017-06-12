@@ -90,6 +90,9 @@ Plug 'honza/vim-snippets'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
+" EditorConfig plugin for Vim
+Plug 'editorconfig/editorconfig-vim'
+
 
 """"""""""""""""""""""""""""""
 " Syntax support

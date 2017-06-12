@@ -39,6 +39,9 @@ Plug 'ryanoasis/vim-devicons'
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -84,6 +87,9 @@ Plug 'sickill/vim-pasta'
 " vim-snipmate default snippets
 Plug 'honza/vim-snippets'
 
+" Asynchronous Lint Engine
+Plug 'w0rp/ale'
+
 
 """"""""""""""""""""""""""""""
 " Syntax support
@@ -92,26 +98,18 @@ Plug 'honza/vim-snippets'
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 
-
-" Emmet for vim
-Plug 'mattn/emmet-vim'
-
-
 " Formats javascript files by js-beautify
 Plug 'maksimr/vim-jsbeautify'
 
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript'
 
-" Add syntax for react.js
-Plug 'mxw/vim-jsx'
-
 " dustjs template syntax highlighting and more for vim
 Plug 'jimmyhchan/dustjs.vim'
 
-
 " CSS3 syntax support
 Plug 'hail2u/vim-css3-syntax'
+
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
@@ -260,3 +258,35 @@ autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
 autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
 autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
 autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
+
+
+""""""""""""""""""""""""""""""
+" ALE
+""""""""""""""""""""""""""""""
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+" let g:ale_open_list = 1
+let g:ale_sign_column_always = 1
+
+" Write this in your vimrc file
+let g:ale_lint_on_text_changed = 'never'
+
+" navigate between errors quickly
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" Show errors or warnings in statusline
+function! LinterStatus() abort
+  let l:counts = ale#statusline#Count(bufnr(''))
+
+  let l:all_errors = l:counts.error + l:counts.style_error
+  let l:all_non_errors = l:counts.total - l:all_errors
+
+  return l:counts.total == 0 ? 'OK' : printf(
+  \   '%dW %dE',
+  \   all_non_errors,
+  \   all_errors
+  \)
+endfunction
+
+set statusline=%{LinterStatus()}

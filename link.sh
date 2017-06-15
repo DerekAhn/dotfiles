@@ -2,6 +2,6 @@
 
 echo "Installing dotfile configurations..."
 
-source exec/install.sh
+source exec/link.sh
 
 echo "Au Pau!"

@@ -25,14 +25,18 @@ snippet sto
 		${2}
 	}, ${1});
 
-snippet cc
-	console.log('${1}');
-
-snippet ey
-	eyes('${1}');
-
 snippet rq
 	require('${1}');
 
 snippet me
 	module.exports = ${1}
+
+snippet cc
+	console.log('${1}');
+
+# eyes
+snippet eyes
+	const eyes = require('eyes').inspector({ pretty: true, maxLength: -1 });
+
+snippet ey
+	d(${1});

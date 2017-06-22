@@ -32,11 +32,11 @@ snippet me
 	module.exports = ${1}
 
 snippet cc
-	console.log('${1}');
+	console.log(${0:${VISUAL}});
 
 # eyes
 snippet eyes
 	const eyes = require('eyes').inspector({ pretty: true, maxLength: -1 });
 
 snippet ey
-	d(${1});
+	eyes({ ${1} });

@@ -8,8 +8,6 @@ alias ping="ping -o"
 alias listDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'select LSQuarantineDataURLString from LSQuarantineEvent'"
 alias clearDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias wifiHistory="defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences |grep LastConnected -A 7"
-alias metasploit="cd /usr/local/share/metasploit-framework"
-alias metasploit="cd /usr/local/share/metasploit-framework"
 
 # Clear terminal files
 alias terminal-clean='sudo rm -f /private/var/log/asl/*.asl'
@@ -18,9 +16,6 @@ alias terminal-clean='sudo rm -f /private/var/log/asl/*.asl'
 alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes
 alias du='du -h -c' # calculate disk usage for a folder
-
-# Applications
-alias ios='open -a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 
 # Copy Public Key to Clipboard
 alias catPubKey='cat ~/.ssh/id_rsa.pub'
@@ -58,16 +53,9 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias showHidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideHidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 10'"
-
 # Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
-alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
-alias canary="/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\ Chrome\\ Canary"
 
 # Brew everything
 alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'

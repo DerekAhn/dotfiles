@@ -41,10 +41,12 @@ brew install p7zip
 brew install postgresql
 brew install python
 brew install readline
+brew install ranger
 brew install reattach-to-user-namespace
 brew install speedtest_cli
 brew install the_silver_searcher
 brew install tmux
+brew install tldr
 brew install vim
 brew install xz
 brew install z

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Running... "
+echo "Running... 🏃"
 
 source exec/install.sh
 
-echo "Au pau!"
+echo "Au pau! 🍻"

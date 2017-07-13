@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Installing dotfile configurations..."
+echo "🌈 Creating relationsips 💚"
 
 source exec/link.sh
 
-echo "Au Pau!"
+echo "Au Pau! 🍻"

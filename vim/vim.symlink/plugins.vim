@@ -45,9 +45,6 @@ Plug 'mattn/emmet-vim'
 " Fuzzy file, buffer, mru, tag, etc finder.
 Plug 'ctrlpvim/ctrlp.vim'
 
-" Code completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh'  }
-
 " Code search and view tool
 Plug 'dyng/ctrlsf.vim'
 
@@ -111,13 +108,13 @@ Plug 'pangloss/vim-javascript'
 Plug 'jimmyhchan/dustjs.vim'
 
 " CSS3 syntax support
-Plug 'hail2u/vim-css3-syntax'
+" Plug 'hail2u/vim-css3-syntax'
 
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
 " SCSS syntax highlighting
-Plug 'cakebaker/scss-syntax.vim'
+" Plug 'cakebaker/scss-syntax.vim'
 
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
@@ -299,3 +296,17 @@ set statusline=%{LinterStatus()}
 " EditorConfig
 """"""""""""""""""""""""""""""
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+
+""""""""""""""""""""""""""""""
+" Neovim
+""""""""""""""""""""""""""""""
+if has('nvim')
+  " Asynchronous completion for neovim
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
+  " Tern-based JavaScript editing support
+  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
+else
+  " Code completion
+  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+endif

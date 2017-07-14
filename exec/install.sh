@@ -56,6 +56,7 @@ brew install z
 brew install zsh-syntax-highlighting
 
 brew tap neovim/homebrew-neovim
+brew install --HEAD neovim
 pip3 install neovim --upgrade
 
 echo "Checkup brew"

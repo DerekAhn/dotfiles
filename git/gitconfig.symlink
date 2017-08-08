@@ -3,6 +3,8 @@
   email = git.derek@gmail.com
 [github]
   user = derekahn
+[gitlab]
+  user = derekahn
 [bitbucket]
   user = DataDerek
 [branch]

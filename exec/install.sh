@@ -52,6 +52,7 @@ brew install tldr
 brew install tmux
 brew install vim
 brew install xz
+brew install yarn
 brew install z
 brew install zsh-syntax-highlighting
 

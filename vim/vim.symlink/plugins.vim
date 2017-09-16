@@ -310,3 +310,31 @@ else
   " Code completion
   Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 endif
+
+""""""""""""""""""""""""""""""
+" Deoplete
+""""""""""""""""""""""""""""""
+if has('nvim')
+  " Enable deoplete.
+  let g:deoplete#enable_at_startup = 1
+
+  if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+  endif
+
+  augroup omnifuncs
+    autocmd!
+    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType javascript setlocal omnifunc=tern#Complete
+  augroup end
+
+  let g:tern_request_timeout = 1
+  let g:tern_show_argument_hints = 'on_hold'
+  let g:tern_show_signature_in_pum = 0
+
+  " Automatically close preview window after autocompletion
+  autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
+endif

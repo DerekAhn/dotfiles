@@ -8,6 +8,15 @@ read gopath
 echo "Please enter your github username (ex: derekahn) :"
 read user
 
+echo "Installing homebrew package manager"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Updateing brew"
+brew update
+brew doctor
+
+echo "Installing go"
+brew install go
+
 echo "Created your gopath: $gopath"
 mkdir $gopath
 
@@ -23,37 +32,56 @@ echo "Installing go tools: godoc, vet"
 go get golang.org/x/tools/cmd/godoc
 go get golang.org/x/tools/cmd/vet
 
-echo "Installing homebrew package manager"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-echo "Updateing brew"
-brew update
-brew doctor
+echo "INSTALLING ALL OTHER 📦  "
 
+# Everything is alphabetical
+echo "Installing ack"
 brew install ack
+echo "Installing autoconf"
 brew install autoconf
+echo "Installing automake"
 brew install automake
-brew install ccrypt
+echo "Installing cscope"
 brew install cscope
+echo "Installing exercism"
 brew install exercism
-brew install go
+echo "Installing flow"
+brew install flow
+echo "Installing hh"
+brew install hh
+echo "Installing htop"
 brew install htop
+echo "Installing macvim"
 brew install macvim
-brew install n
+echo "Installing p7zip"
 brew install p7zip
-brew install postgresql
+echo "Installing python3"
 brew install python3
-brew install ranger
+echo "Installing readline"
 brew install readline
+echo "Installing reattach-to-user-namespace"
 brew install reattach-to-user-namespace
+echo "Installing ruby"
+brew install ruby
+echo "Installing readline"
+brew install readline
+echo "Installing speedtest_cli"
 brew install speedtest_cli
+echo "Installing the_silver_searcher"
 brew install the_silver_searcher
+echo "Installing tig"
 brew install tig
+echo "Installing tldr"
 brew install tldr
+echo "Installing tmux"
 brew install tmux
+echo "Installing vim"
 brew install vim
-brew install xz
+echo "Installing yarn"
 brew install yarn
+echo "Installing z"
 brew install z
+echo "Installing zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
 
 brew tap neovim/homebrew-neovim

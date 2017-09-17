@@ -119,6 +119,11 @@ Plug 'SirVer/ultisnips'
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
 
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+
 call plug#end()
 
 

@@ -32,6 +32,11 @@ Plug 'jiangmiao/auto-pairs'
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
 
+" Interactive command execution
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+
+" Most Recently Used
+Plug 'Shougo/neomru.vim'
 
 """"""""""""""""""""""""""""""
 " Editor Utils

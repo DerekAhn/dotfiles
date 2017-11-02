@@ -40,6 +40,10 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Most Recently Used
 Plug 'Shougo/neomru.vim'
 
+" Zoom in/out of windows
+Plug 'troydm/zoomwintab.vim'
+
+
 """"""""""""""""""""""""""""""
 " Editor Utils
 """"""""""""""""""""""""""""""
@@ -362,3 +366,9 @@ if has('nvim')
   " Automatically close preview window after autocompletion
   autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 endif
+
+
+""""""""""""""""""""""""""""""
+" Zoomwintab
+""""""""""""""""""""""""""""""
+nnoremap <silent> <leader>z :ZoomWinTabToggle<cr>

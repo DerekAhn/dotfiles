@@ -4,15 +4,11 @@
 
 call plug#begin('~/.vim/plugged')
 
-
 """"""""""""""""""""""""""""""
 " Editor Config
 """"""""""""""""""""""""""""""
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
-
-" Lean & mean status/tabline
-Plug 'vim-airline/vim-airline'
 
 " Tree explorer for vim.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -26,11 +22,17 @@ Plug 'edkolev/tmuxline.vim'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
-" Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
-
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
+
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
+" Shows a git diff in the gutter
+Plug 'airblade/vim-gitgutter'
+
+" Git wrapper
+Plug 'tpope/vim-fugitive'
 
 " Interactive command execution
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
@@ -41,11 +43,18 @@ Plug 'Shougo/neomru.vim'
 """"""""""""""""""""""""""""""
 " Editor Utils
 """"""""""""""""""""""""""""""
+" Asynchronous Lint Engine
+Plug 'w0rp/ale'
+
+" EditorConfig plugin for Vim
+Plug 'editorconfig/editorconfig-vim'
+
+" Insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 " Alignment for vim
 Plug 'junegunn/vim-easy-align'
 
-" Emmet for vim
-Plug 'mattn/emmet-vim'
 " fzf ❤️ vim (Fuzzy file, buffer finder)
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -58,9 +67,6 @@ Plug 'jlanzarotta/bufexplorer'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
-
-" Git wrapper
-Plug 'tpope/vim-fugitive'
 
 " Enable repeating supported plugin maps
 Plug 'tpope/vim-repeat'
@@ -77,23 +83,17 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Preview colors in source code
 Plug 'ap/vim-css-color'
 
+" Emmet for vim
+Plug 'mattn/emmet-vim'
+
 " Vim motions on speed
 Plug 'easymotion/vim-easymotion'
-
-" Shows a git diff in the gutter
-Plug 'airblade/vim-gitgutter'
 
 " Paste in Vim with indentation adjusted to destination context
 Plug 'sickill/vim-pasta'
 
 " vim-snipmate default snippets
 Plug 'honza/vim-snippets'
-
-" Asynchronous Lint Engine
-Plug 'w0rp/ale'
-
-" EditorConfig plugin for Vim
-Plug 'editorconfig/editorconfig-vim'
 
 
 """"""""""""""""""""""""""""""

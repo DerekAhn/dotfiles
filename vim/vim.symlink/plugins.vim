@@ -41,9 +41,9 @@ Plug 'junegunn/vim-easy-align'
 
 " Emmet for vim
 Plug 'mattn/emmet-vim'
-
-" Fuzzy file, buffer, mru, tag, etc finder.
-Plug 'ctrlpvim/ctrlp.vim'
+" fzf ❤️ vim (Fuzzy file, buffer finder)
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Code search and view tool
 Plug 'dyng/ctrlsf.vim'
@@ -172,14 +172,27 @@ endif
 
 
 """"""""""""""""""""""""""""""
-" ctrp
+" fzf
 """"""""""""""""""""""""""""""
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip  " MacOSX/Linux
-" let g:ctrlp_custom_ignore = 'node_modules\|bower_components\|DS_Store\|git'
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|bower_components$\|node_modules$\|\.DS_Store$\',
-  \ 'file': '\.so$\|\.swp$\|\.zip$\|\*/tmp/*$|\~$\',
-  \ }
+let g:fzf_layout = { 'down': '40%' }
+" Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" Search project files, respecting git ignore
+nnoremap <silent> <C-p> :FZF<CR>
+
+" Search all files, e.g. node_modules/
+nnoremap <silent> <leader>af :call fzf#vim#files('',
+      \ {'source': 'ag --hidden --ignore .git -f -g "" -u', 'down': '40%'})<CR>
+
+" Search MRU buffers
+nnoremap <silent> <leader>f :Buffers<CR>
+nnoremap <silent> <leader>` :Marks<CR>
+
+" [Tags] Command to generate tags file
+" let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test'
+nnoremap <silent> <leader>t :Tags<CR>
+nnoremap <silent> <leader>b :BTags<CR>
 
 
 """"""""""""""""""""""""""""""

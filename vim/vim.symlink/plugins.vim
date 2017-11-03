@@ -119,11 +119,15 @@ Plug 'jimmyhchan/dustjs.vim'
 " CSS3 syntax support
 " Plug 'hail2u/vim-css3-syntax'
 
+" SCSS syntax highlighting
+" Plug 'cakebaker/scss-syntax.vim'
+
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
-" SCSS syntax highlighting
-" Plug 'cakebaker/scss-syntax.vim'
+
+" Syntax for styled-components
+Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'

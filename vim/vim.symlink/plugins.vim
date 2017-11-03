@@ -125,6 +125,8 @@ Plug 'jimmyhchan/dustjs.vim'
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
+" React JSX syntax highlighting & indenting
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Syntax for styled-components
 Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }

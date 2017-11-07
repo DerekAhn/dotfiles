@@ -110,8 +110,14 @@ Plug 'fatih/vim-go'
 " Formats javascript files by js-beautify
 Plug 'maksimr/vim-jsbeautify'
 
+" React JSX syntax highlighting & indenting
+" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+
 " Javascript indentation and syntax support
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+
+" Syntax for styled-components
+Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
 
 " dustjs template syntax highlighting and more for vim
 Plug 'jimmyhchan/dustjs.vim'
@@ -124,12 +130,6 @@ Plug 'jimmyhchan/dustjs.vim'
 
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
-
-" React JSX syntax highlighting & indenting
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-
-" Syntax for styled-components
-Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
@@ -280,7 +280,7 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 """"""""""""""""""""""""""""""
 " vim-jsx
 """"""""""""""""""""""""""""""
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+" let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 
 """"""""""""""""""""""""""""""
@@ -308,6 +308,10 @@ let g:ale_lint_on_text_changed = 'never'
 " navigate between errors quickly
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" add both style and eslint for jsx
+let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
+let g:ale_linter_aliases = {'jsx': 'css'}
 
 " Show errors or warnings in statusline
 function! LinterStatus() abort

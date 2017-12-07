@@ -7,6 +7,9 @@ call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""
 " Editor Config
 """"""""""""""""""""""""""""""
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
 " A collection of themes for vim-airline
 Plug 'vim-airline/vim-airline-themes'
 
@@ -14,7 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Color Scheme
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'joshdick/onedark.vim'
 
 " Tmux statusline generator with support for airline
 Plug 'edkolev/tmuxline.vim'
@@ -25,9 +28,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
 
-" Lean & mean status/tabline
-Plug 'vim-airline/vim-airline'
-
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
@@ -35,10 +35,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
 " Interactive command execution
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
 " Most Recently Used
-Plug 'Shougo/neomru.vim'
+" Plug 'Shougo/neomru.vim'
 
 " Zoom in/out of windows
 Plug 'troydm/zoomwintab.vim'
@@ -105,7 +105,7 @@ Plug 'honza/vim-snippets'
 """"""""""""""""""""""""""""""
 
 " Go development plugin for Vim
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " Formats javascript files by js-beautify
 Plug 'maksimr/vim-jsbeautify'
@@ -117,7 +117,7 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Syntax for styled-components
-Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
 
 " dustjs template syntax highlighting and more for vim
 Plug 'jimmyhchan/dustjs.vim'
@@ -135,9 +135,9 @@ Plug 'SirVer/ultisnips'
 Plug 'plasticboy/vim-markdown'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+" Plug 'prettier/vim-prettier', {
+"   \ 'do': 'yarn install',
+"   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 
 call plug#end()
 
@@ -145,6 +145,13 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => PLUGIN SPECIFC CONFIGURATIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
+" onedark theme
+""""""""""""""""""""""""""""""
+let g:onedark_termcolors = 256
+let g:onedark_terminal_italics = 1 " I love italic for comments
+
 
 """"""""""""""""""""""""""""""
 " indentLine
@@ -256,7 +263,7 @@ let g:ctrlsf_indent = 2
 """"""""""""""""""""""""""""""
 let g:airline#extensions#branch#displayed_head_limit = 10
 let g:airline_powerline_fonts = 1
-let g:airline_theme="badwolf"
+let g:airline_theme="bubblegum"
 
 " Automatically truncate sections
 let g:airline#extensions#default#section_truncate_width = {

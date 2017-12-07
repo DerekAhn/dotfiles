@@ -48,13 +48,13 @@ set background=dark
 
 " Theme, Colorscheme, & Font
 if has("gui_running")
-  colorscheme PaperColor
+  colorscheme onedark
   set guifont=Monaco:h14
   set linespace=2
   set noantialias
 else
   try
-    colorscheme PaperColor
+    colorscheme onedark
   catch
   endtry
 endif

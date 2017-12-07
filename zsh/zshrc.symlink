@@ -7,7 +7,7 @@ plugins=(git osx npm ruby rvm jump)
 for config ($zsh/**/*.zsh) source $config
 
 # Look in ~/.oh-my-zsh/themes/
-ZSH_THEME="juanghurtado"
+ZSH_THEME="spaceship"
 
 export ZSH=$HOME/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh

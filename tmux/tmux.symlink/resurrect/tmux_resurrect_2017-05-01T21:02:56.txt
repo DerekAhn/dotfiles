@@ -1,3 +1,0 @@
-pane	exercism	1	:vim	1	:*	1	:/Users/reptar/.dotfiles	1	vim	:vim
-window	exercism	1	1	:*	d29d,204x59,0,0,0
-state	exercism	

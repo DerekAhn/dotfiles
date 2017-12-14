@@ -1,3 +1,0 @@
-pane	exercism	1	:zsh	1	:*	1	:/Users/reptar	1	zsh	:
-window	exercism	1	1	:*	b25d,80x24,0,0,0
-state	exercism	

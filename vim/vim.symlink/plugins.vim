@@ -111,7 +111,7 @@ Plug 'honza/vim-snippets'
 Plug 'maksimr/vim-jsbeautify'
 
 " React JSX syntax highlighting & indenting
-" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }

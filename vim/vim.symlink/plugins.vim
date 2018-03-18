@@ -82,13 +82,13 @@ Plug 'tpope/vim-surround'
 Plug 'Yggdroot/indentLine'
 
 " Undo history visualizer
-Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
 " Preview colors in source code
 Plug 'ap/vim-css-color'
 
 " Emmet for vim
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 
 " Vim motions on speed
 Plug 'easymotion/vim-easymotion'
@@ -111,7 +111,7 @@ Plug 'honza/vim-snippets'
 Plug 'maksimr/vim-jsbeautify'
 
 " React JSX syntax highlighting & indenting
-Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 
 " Javascript indentation and syntax support
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
@@ -138,6 +138,9 @@ Plug 'plasticboy/vim-markdown'
 " Plug 'prettier/vim-prettier', {
 "   \ 'do': 'yarn install',
 "   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
+
+" A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 

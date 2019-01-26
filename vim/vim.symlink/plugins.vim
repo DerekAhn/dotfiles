@@ -7,11 +7,8 @@ call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""
 " Editor Config
 """"""""""""""""""""""""""""""
-" Lean & mean status/tabline
-Plug 'vim-airline/vim-airline'
-
-" A collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
+" Asynchronous completion for neovim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 
 " Tree explorer for vim.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -28,17 +25,17 @@ Plug 'christoomey/vim-tmux-navigator'
 " Add filetype glyphs (icons)
 Plug 'ryanoasis/vim-devicons'
 
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
+" A collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
+
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
-
-" Interactive command execution
-" Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-
-" Most Recently Used
-" Plug 'Shougo/neomru.vim'
 
 " Zoom in/out of windows
 Plug 'troydm/zoomwintab.vim'
@@ -50,16 +47,25 @@ Plug 'troydm/zoomwintab.vim'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
+" The ultimate undo history visualizer for VIM
+Plug 'mbbill/undotree'
+
 " EditorConfig plugin for Vim
 Plug 'editorconfig/editorconfig-vim'
+
+" A Vim plugin for Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'prettier/vim-prettier', {
+"   \ 'do': 'yarn install',
+"   \ 'for': ['javascript', 'css','json', 'graphql', 'markdown', 'yaml', 'html'] }
 
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
 " Alignment for vim
-Plug 'junegunn/vim-easy-align'
+" Plug 'junegunn/vim-easy-align'
 
-" fzf ❤️ vim (Fuzzy file, buffer finder)
+" fzf  vim (Fuzzy file, buffer finder)
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
@@ -73,7 +79,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-commentary'
 
 " Enable repeating supported plugin maps
-Plug 'tpope/vim-repeat'
+" Plug 'tpope/vim-repeat'
 
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -81,11 +87,8 @@ Plug 'tpope/vim-surround'
 " Display indention levels with vertical lines
 Plug 'Yggdroot/indentLine'
 
-" Undo history visualizer
-" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
-
 " Preview colors in source code
-Plug 'ap/vim-css-color'
+" Plug 'ap/vim-css-color'
 
 " Emmet for vim
 " Plug 'mattn/emmet-vim'
@@ -99,28 +102,29 @@ Plug 'sickill/vim-pasta'
 " vim-snipmate default snippets
 Plug 'honza/vim-snippets'
 
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
+
 
 """"""""""""""""""""""""""""""
 " Syntax support
 """"""""""""""""""""""""""""""
 
 " Go development plugin for Vim
-" Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 
-" Formats javascript files by js-beautify
-Plug 'maksimr/vim-jsbeautify'
+" Typescript syntax files for Vim
+Plug 'leafgarland/typescript-vim'
 
-" React JSX syntax highlighting & indenting
-" Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
+" Vim syntax file & snippets for Docker's Dockerfile
+Plug 'ekalinin/Dockerfile.vim'
 
 " Javascript indentation and syntax support
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'pangloss/vim-javascript'
 
-" Syntax for styled-components
-" Plug 'fleischie/vim-styled-components', { 'for': ['javascript', 'javascript.jsx'] }
-
-" dustjs template syntax highlighting and more for vim
-Plug 'jimmyhchan/dustjs.vim'
+" React JSX syntax highlighting & indenting
+Plug 'mxw/vim-jsx'
 
 " CSS3 syntax support
 " Plug 'hail2u/vim-css3-syntax'
@@ -128,19 +132,17 @@ Plug 'jimmyhchan/dustjs.vim'
 " SCSS syntax highlighting
 " Plug 'cakebaker/scss-syntax.vim'
 
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
+" Syntax for styled-components
+" Plug 'styled-components/vim-styled-components'
 
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
 
-" post install (yarn install | npm install) then load plugin only for editing supported files
-" Plug 'prettier/vim-prettier', {
-"   \ 'do': 'yarn install',
-"   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
-
 " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 Plug 'jparise/vim-graphql'
+
+" Improved nginx vim plugin (incl. syntax highlighting)
+" Plug 'chr4/nginx.vim'
 
 call plug#end()
 
@@ -170,7 +172,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.js.map$', '\.DS_Store$']
 let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize=25
+let g:NERDTreeWinSize = 25
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 map <C-e> :NERDTreeToggle<CR>
@@ -179,7 +181,7 @@ map <C-e> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""
 " vim markdown
 """"""""""""""""""""""""""""""
-let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_folding_disabled = 1
 
 
 """"""""""""""""""""""""""""""
@@ -266,6 +268,7 @@ let g:ctrlsf_indent = 2
 """"""""""""""""""""""""""""""
 let g:airline#extensions#branch#displayed_head_limit = 10
 let g:airline_powerline_fonts = 1
+" let g:airline_theme="badwolf"
 let g:airline_theme="bubblegum"
 
 " Automatically truncate sections
@@ -286,26 +289,38 @@ let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 
+""""""""""""""""""""""""""""""
+" vim-javascript
+""""""""""""""""""""""""""""""
+let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
+let g:javascript_plugin_flow = 1 " Enables syntax highlighting for Flow.
 
 """"""""""""""""""""""""""""""
 " vim-jsx
 """"""""""""""""""""""""""""""
-" let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
-
-""""""""""""""""""""""""""""""
-" vim-jsbeautify
-""""""""""""""""""""""""""""""
-autocmd FileType javascript vnoremap <buffer>  <c-f> :call RangeJsBeautify()<cr>
-autocmd FileType json vnoremap <buffer> <c-f> :call RangeJsonBeautify()<cr>
-autocmd FileType jsx vnoremap <buffer> <c-f> :call RangeJsxBeautify()<cr>
-autocmd FileType html vnoremap <buffer> <c-f> :call RangeHtmlBeautify()<cr>
-autocmd FileType css vnoremap <buffer> <c-f> :call RangeCSSBeautify()<cr>
-
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 """"""""""""""""""""""""""""""
 " ALE
 """"""""""""""""""""""""""""""
+let g:ale_linters = {
+\   'javascript': ['eslint', 'flow'],
+\}
+
+let g:ale_fixers = {
+\   'javascript': [
+\       'eslint',
+\       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+\   ],
+\}
+
+let g:ale_linter_aliases = {'jsx': 'css'}
+
+let g:ale_pattern_options = {
+\ '\.min\.js$': {'ale_linters': [], 'ale_fixers': []},
+\ '\.min\.css$': {'ale_linters': [], 'ale_fixers': []},
+\}
+
 let g:ale_sign_error = 'E'
 let g:ale_sign_warning = 'W'
 " let g:ale_open_list = 1
@@ -316,12 +331,8 @@ let g:ale_echo_msg_format = '[%linter%] %s'
 let g:ale_lint_on_text_changed = 'never'
 
 " navigate between errors quickly
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" add both style and eslint for jsx
-let g:ale_linters = {'jsx': ['stylelint', 'eslint']}
-let g:ale_linter_aliases = {'jsx': 'css'}
+nmap <silent> <C-S-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-S-j> <Plug>(ale_next_wrap)
 
 " Show errors or warnings in statusline
 function! LinterStatus() abort
@@ -345,50 +356,41 @@ set statusline=%{LinterStatus()}
 """"""""""""""""""""""""""""""
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-
-""""""""""""""""""""""""""""""
-" Neovim
-""""""""""""""""""""""""""""""
-if has('nvim')
-  " Asynchronous completion for neovim
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-  " Tern-based JavaScript editing support
-  Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern', 'for': ['javascript', 'javascript.jsx'] }
-else
-  " Code completion
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-endif
-
 """"""""""""""""""""""""""""""
 " Deoplete
 """"""""""""""""""""""""""""""
-if has('nvim')
-  " Enable deoplete.
-  let g:deoplete#enable_at_startup = 1
+" Enable deoplete.
+let g:deoplete#enable_at_startup = 1
 
-  if !exists('g:deoplete#omni#input_patterns')
-    let g:deoplete#omni#input_patterns = {}
-  endif
-
-  augroup omnifuncs
-    autocmd!
-    autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-    autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-    autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType javascript setlocal omnifunc=tern#Complete
-  augroup end
-
-  let g:tern_request_timeout = 1
-  let g:tern_show_argument_hints = 'on_hold'
-  let g:tern_show_signature_in_pum = 0
-
-  " Automatically close preview window after autocompletion
-  autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
 endif
 
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+augroup end
+
+let g:tern_request_timeout = 1
+let g:tern_show_argument_hints = 'on_hold'
+let g:tern_show_signature_in_pum = 0
+
+let g:python3_host_prog  = '/usr/local/Cellar/python3/3.7.2/bin/python3'
+" Automatically close preview window after autocompletion
+autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
 """"""""""""""""""""""""""""""
 " Zoomwintab
 """"""""""""""""""""""""""""""
 nnoremap <silent> <leader>z :ZoomWinTabToggle<cr>
+
+""""""""""""""""""""""""""""""
+" Prettier
+""""""""""""""""""""""""""""""
+
+" Override default with async cuz vim8/neovim
+" nmap <Leader>p <Plug>(PrettierAsync)

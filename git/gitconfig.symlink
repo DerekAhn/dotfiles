@@ -1,12 +1,6 @@
 [user]
   name = Derek Ahn
-  email = git.derek@gmail.com
-[github]
-  user = derekahn
-[gitlab]
-  user = derekahn
-[bitbucket]
-  user = DataDerek
+	email = git.derek@gmail.com
 [branch]
   mergeoptions = --no-ff
 [color]

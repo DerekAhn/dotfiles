@@ -1,5 +1,16 @@
 # Docker alias and function
 
+# Shorten command
+alias dcc="docker-compose"
+
+alias dclt="docker-compose logs --tail=100 -f"
+
+# Cleanup
+alias dp="docker system prune"
+
+# Remove Exited containers
+alias drmex="docker rm $(docker ps -q -f "status=exited")"
+
 # Get latest container ID
 alias dl="docker ps -l -q"
 
@@ -9,8 +20,11 @@ alias dps="docker ps"
 # Get process included stop container
 alias dpa="docker ps -a"
 
+# Shortened docker image
+alias di="docker image"
+
 # Get images
-alias di="docker images"
+alias dis="docker images"
 
 # Get container IP
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
@@ -24,6 +38,15 @@ alias dki="docker run -i -t -P"
 # Execute interactive container, e.g., $dex base /bin/bash
 alias dex="docker exec -i -t"
 
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dcu="docker-compose up"
+
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dcd="docker-compose down"
+
+# Remove all untagged images
+alias drmtag="docker rmi $(docker images | grep "^<none>" | awk "{print $3}")"
+
 # Stop all containers
 dstop() { docker stop $(docker ps -a -q); }
 
@@ -34,7 +57,7 @@ drm() { docker rm $(docker ps -a -q); }
 alias drmf='docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)'
 
 # Remove all images
-dri() { docker rmi $(docker images -q); }
+dri() { docker rmi -f $(docker images -q); }
 
 # Dockerfile build, e.g., $dbu tcnksm/test
 dbu() { docker build -t=$1 .; }

@@ -8,15 +8,6 @@ read gopath
 echo "Please enter your github username (ex: derekahn) :"
 read user
 
-echo "Installing homebrew package manager"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-echo "Updateing brew"
-brew update
-brew doctor
-
-echo "Installing go"
-brew install go
-
 echo "Created your gopath: $gopath"
 mkdir $gopath
 
@@ -31,48 +22,40 @@ export PATH=$PATH:$GOROOT/bin
 echo "Installing go tools: godoc, vet"
 go get golang.org/x/tools/cmd/godoc
 go get golang.org/x/tools/cmd/vet
+echo "Tools installed. For more information visit https://golang.org/doc/code.html"
 
-echo "INSTALLING ALL OTHER 📦  "
+
+echo "Installing homebrew package manager"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+echo "Updateing brew"
+brew update
+echo "Checkup brew"
+brew doctor
+
+# iterm2 shell integrations
+curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
 
 # Everything is alphabetical
-echo "Installing ack"
-brew install ack
-echo "Installing autoconf"
-brew install autoconf
-echo "Installing automake"
-brew install automake
-echo "Installing cscope"
-brew install cscope
-echo "Installing exercism"
-brew install exercism
-echo "Installing flow"
-brew install flow
-echo "Installing hh"
-brew install hh
+echo "Installing exa"
+brew install exa
+echo "Installing golang"
+brew install golang
 echo "Installing htop"
 brew install htop
-echo "Installing macvim"
-brew install macvim
+echo "Installing n"
+brew install n
+echo "Installing neovim"
+brew install neovim
 echo "Installing p7zip"
 brew install p7zip
-echo "Installing python3"
-brew install python3
-echo "Installing readline"
-brew install readline
-echo "Installing reattach-to-user-namespace"
-brew install reattach-to-user-namespace
-echo "Installing ruby"
-brew install ruby
-echo "Installing readline"
-brew install readline
+echo "Installing python"
+brew install python
+echo "Installing ranger"
+brew install ranger
 echo "Installing speedtest_cli"
 brew install speedtest_cli
-echo "Installing the_silver_searcher"
-brew install the_silver_searcher
-echo "Installing tig"
-brew install tig
-echo "Installing tldr"
-brew install tldr
+echo "Installing speedtest_cli"
+brew install reaatch-to-user-namespace
 echo "Installing tmux"
 brew install tmux
 echo "Installing vim"
@@ -84,14 +67,21 @@ brew install z
 echo "Installing zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
 
-brew tap neovim/homebrew-neovim
-brew install --HEAD neovim
-pip3 install neovim --upgrade
-
-echo "Checkup brew"
-brew cleanup
-brew prune
-brew doctor
+echo -e "\n\nInstalling to ~/.config"
+echo "=============================="
+if [ ! -d $HOME/.config ]; then
+  echo "Creating ~/.config"
+  mkdir -p $HOME/.config
+fi
+for config in $DOTFILES/config/* ; do
+  target=$HOME/.config/$( basename $config )
+  if [ -e $target ]; then
+    echo "~${target#$HOME} already exists... Skipping."
+  else
+    echo "Creating symlink for $config"
+    ln -s $config $target
+  fi
+done
 
 echo "Installing Nerd-fonts to ~/Library/Fonts"
 cd ~/Library/Fonts                                                                                      && \

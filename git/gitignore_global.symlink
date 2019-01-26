@@ -23,7 +23,7 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
+# *.sql
 *.sqlite
 
 # OS generated files #
@@ -36,15 +36,16 @@
 ehthumbs.db
 Thumbs.db
 
+
 # Sass Cache #
 ##############
 *.sassc
 .sass-cache
 
-# Node #
 ########
 node_modules/
 
 # VIM #
 #######
 tags
+.tern-port

@@ -1,3 +1,5 @@
-tmux/tmux.symlink/resurrect
-vim/vim.symlink/temp_dirs
-zsh/vps.zsh
+configstore
+tmux.symlink
+temp_dirs
+plugged
+vim/vim.symlink/.vim

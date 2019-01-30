@@ -36,6 +36,8 @@ brew doctor
 curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
 
 # Everything is alphabetical
+echo "Installing ack"
+brew install ack
 echo "Installing exa"
 brew install exa
 echo "Installing golang"

@@ -52,3 +52,8 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt spaceship
+
+# So that git plugin works
+source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+source ~/.oh-my-zsh/plugins/systemd/systemd.plugin.zsh

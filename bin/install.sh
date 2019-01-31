@@ -44,6 +44,8 @@ echo "Installing golang"
 brew install golang
 echo "Installing htop"
 brew install htop
+echo "Installing httpie"
+brew install httpie
 echo "Installing n"
 brew install n
 echo "Installing neovim"

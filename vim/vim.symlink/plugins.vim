@@ -55,9 +55,6 @@ Plug 'editorconfig/editorconfig-vim'
 
 " A Vim plugin for Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" Plug 'prettier/vim-prettier', {
-"   \ 'do': 'yarn install',
-"   \ 'for': ['javascript', 'css','json', 'graphql', 'markdown', 'yaml', 'html'] }
 
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
@@ -115,7 +112,7 @@ Plug 'SirVer/ultisnips'
 Plug 'fatih/vim-go'
 
 " Typescript syntax files for Vim
-Plug 'leafgarland/typescript-vim'
+" Plug 'leafgarland/typescript-vim'
 
 " Vim syntax file & snippets for Docker's Dockerfile
 Plug 'ekalinin/Dockerfile.vim'

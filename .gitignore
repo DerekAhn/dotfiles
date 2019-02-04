@@ -3,3 +3,4 @@ tmux.symlink
 temp_dirs
 plugged
 vim/vim.symlink/.vim
+.netrwhist

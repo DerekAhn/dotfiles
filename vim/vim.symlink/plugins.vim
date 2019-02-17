@@ -376,8 +376,8 @@ let g:tern_request_timeout = 1
 let g:tern_show_argument_hints = 'on_hold'
 let g:tern_show_signature_in_pum = 0
 
-let g:python_host_prog = '/usr/local/Cellar/python/3.7.2_1/bin/python3'
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.2_1/bin/python3'
+let g:python_host_prog = '/usr/local/Cellar/python/3.7.2_2/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.2_2/bin/python3'
 " Automatically close preview window after autocompletion
 autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 

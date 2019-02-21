@@ -71,21 +71,6 @@ brew install z
 echo "Installing zsh-syntax-highlighting"
 brew install zsh-syntax-highlighting
 
-echo -e "\n\nInstalling to ~/.config"
-echo "=============================="
-if [ ! -d $HOME/.config ]; then
-  echo "Creating ~/.config"
-  mkdir -p $HOME/.config
-fi
-for config in $DOTFILES/config/* ; do
-  target=$HOME/.config/$( basename $config )
-  if [ -e $target ]; then
-    echo "~${target#$HOME} already exists... Skipping."
-  else
-    echo "Creating symlink for $config"
-    ln -s $config $target
-  fi
-done
 
 echo "Installing Nerd-fonts to ~/Library/Fonts"
 cd ~/Library/Fonts                                                                                      && \

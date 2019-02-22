@@ -67,6 +67,8 @@ echo "Installing speedtest_cli"
 brew install speedtest_cli
 echo "Installing reaatch-to-user-namespace"
 brew install reattach-to-user-namespace
+echo "Installing tig"
+brew install tig
 echo "Installing tmux"
 brew install tmux
 echo "Installing vim"

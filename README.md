@@ -2,6 +2,11 @@
 
 A portable environment for any 🍎 💻
 
+### Examples
+
+vim example
+![work space example](./assets/vim-example.png)
+
 ## Install Custom ZSH Theme
 
 [Spaceship theme 🚀](https://github.com/denysdovhan/spaceship-prompt)

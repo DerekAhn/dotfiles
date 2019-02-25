@@ -13,7 +13,7 @@ help: Makefile
 	@echo
 
 ## setup: Installs and symlinks
-setup: tpm install link
+setup: tpm install link setup-go
 
 ## install: Installs brew, brew packages, go, etc
 install:
@@ -23,6 +23,12 @@ install:
 
 ## link: symlinks tmux, vim, neovim, zsh, etc
 link:
+	@echo "\nRunning "$(PROJECTNAME)"/bin/symlink.sh\n"
+	./bin/symlink.sh
+	@echo $(DONE)
+
+## setup-go: Sets up go workspace and tooling
+setup-go:
 	@echo "\nRunning "$(PROJECTNAME)"/bin/symlink.sh\n"
 	./bin/symlink.sh
 	@echo $(DONE)

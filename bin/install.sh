@@ -104,6 +104,10 @@ brew install wireshark
 echo "Installing visual-studio-code"
 brew cask install visual-studio-code
 
+echo "Installing nerd fonts"
+brew tap caskroom/fonts
+brew cask install font-droidsansmono-nerd-font-mono
+
 echo "🧹 Cleaning up..."
 brew cleanup
 

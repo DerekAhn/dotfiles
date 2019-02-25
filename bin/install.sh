@@ -1,19 +1,19 @@
 #!/bin/bash
 
-DOTFILES=$HOME/.dotfiles
-
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 echo "Installing 🍺 homebrew package manager"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo "Updateing brew"
 brew update
+echo "Upgrade brew"
+brew upgrade
 echo "Checkup brew"
 brew doctor
 
 echo "Installing cask"
 brew install cask
+
+echo "Installing oh-my-zsh 🐚"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # iterm2 shell integrations
 curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
@@ -21,6 +21,14 @@ curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.
 # EVERYTHING IS ALPHABETICAL
 
 # Utils
+echo "Installing GNU core utilities (those that come with OS X are outdated)"
+brew install coreutils
+brew install moreutils
+echo"Installing GNU 'find', 'locate', 'updatedb', and 'xargs', 'g'-prefixed"
+brew install findutils
+echo "Installing GNU sed, overwriting the built-in sed"
+brew install gnu-sed --with-default-names
+
 echo "Installing ack"
 brew install ack
 echo "Installing exa"
@@ -29,10 +37,20 @@ echo "Installing fzf"
 brew install fzf
 echo "Installing golang"
 brew install golang
+echo "Installing gotop"
+brew install gotop
 echo "Installing httpie"
 brew install httpie
+echo "Installing mtr - ping & traceroute. best"
+brew install mtr
+  echo "allow mtr to run without sudo"
+  mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/derekahn/.homebrew/Cellar/mtr/0.86`
+  sudo chmod 4755 $mtrlocation/sbin/mtr
+  sudo chown root $mtrlocation/sbin/mtr
 echo "Installing n"
 brew install n
+echo "Installing ncdu"
+brew install ncdu
 echo "Installing neovim"
 brew install neovim
 echo "Installing p7zip"
@@ -85,6 +103,9 @@ echo "Installing wireshark"
 brew install wireshark
 echo "Installing visual-studio-code"
 brew cask install visual-studio-code
+
+echo "🧹 Cleaning up..."
+brew cleanup
 
 # for deoplete in neovim
 pip3 install --user pynvim

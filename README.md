@@ -5,7 +5,27 @@ A portable environment for any 🍎 💻
 ### Examples
 
 vim example
-![work space example](./assets/vim-example.png)
+![work space example](./assets/pics/vim-example.png)
+
+## Setup Iterm3
+
+### Setting 🤓 Nerd Font ✒
+
+```shell
+iTerm2 -> Preferences -> Profiles -> Text -> Font -> Change Font
+```
+
+![set font](./assets/pics/change_font.png)
+
+### Setting color theme
+
+### Setting `onedark` color scheme
+
+```shell
+iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets... -> onedark
+```
+
+![set colors](./assets/pics/set_colors.png)
 
 ## Install Custom ZSH Theme
 
@@ -39,18 +59,15 @@ $ ctrl-a + I
 | Robomongo                        | MongoDB 🐵 client                      | [robomongo](https://robomongo.org/)                                                                |
 | Tower                            | Git 🐱 client                          | [git-tower](https://www.git-tower.com/mac)                                                         |
 
-## Finishing Setup
-
-### Unzip `./assets/*`
+## Import Alfred [Workflows](https://www.alfredapp.com/workflows/)
 
 ```shell
 $ 7unzip ./assets/alfred_workflows.tar.7z
-$ 7unzip ./assets/iterm.tar.7z
 ```
 
-- Import alfred_workflows into `alfred.app`
-- Import ./assets/iterm/DroidSansMono into `Font\ Book.app`
-- Import ./assets/iterm/onedark.itermcolors into `iTerm.app`
+#### Drag and drop `*.alfredworkflow` into:
+
+![import workflows](./assets/pics/import_workflows.png)
 
 ## Chrome Plugins
 

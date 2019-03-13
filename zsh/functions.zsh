@@ -39,6 +39,11 @@ function gzsize() {
   echo "gzipped size (bytes): "
   gzip -c "$1" | wc -c
 }
+
+# unzip tar.gz
+function untargz() {
+  echo "orig size    (bytes): "
+  gunzip -c "$1" | tar xopf -
 }
 
 # All the dig info

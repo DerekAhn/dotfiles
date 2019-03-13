@@ -48,10 +48,10 @@ Plug 'troydm/zoomwintab.vim'
 Plug 'w0rp/ale'
 
 " The ultimate undo history visualizer for VIM
-Plug 'mbbill/undotree'
+" Plug 'mbbill/undotree'
 
 " EditorConfig plugin for Vim
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim'
 
 " A Vim plugin for Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -76,7 +76,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-commentary'
 
 " Enable repeating supported plugin maps
-" Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -118,10 +118,10 @@ Plug 'fatih/vim-go'
 Plug 'ekalinin/Dockerfile.vim'
 
 " Javascript indentation and syntax support
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 
 " React JSX syntax highlighting & indenting
-Plug 'mxw/vim-jsx'
+" Plug 'mxw/vim-jsx'
 
 " CSS3 syntax support
 " Plug 'hail2u/vim-css3-syntax'
@@ -136,7 +136,7 @@ Plug 'mxw/vim-jsx'
 Plug 'plasticboy/vim-markdown'
 
 " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
-Plug 'jparise/vim-graphql'
+" Plug 'jparise/vim-graphql'
 
 " Improved nginx vim plugin (incl. syntax highlighting)
 " Plug 'chr4/nginx.vim'

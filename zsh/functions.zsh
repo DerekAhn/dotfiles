@@ -33,7 +33,7 @@ function gitexport(){
 }
 
 # get gzipped size
-function gz() {
+function gzsize() {
   echo "orig size    (bytes): "
   cat "$1" | wc -c
   echo "gzipped size (bytes): "

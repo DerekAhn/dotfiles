@@ -546,3 +546,6 @@ call NERDTreeHighlightFile('png', 36, 'none', '#15A274', '#15A274')
 
 " indentation lines for golang
 set list lcs=tab:\|\
+
+" solution for 'E45 `readonly option is set (add ! to override)`'
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar>edit!

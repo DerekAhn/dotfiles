@@ -28,21 +28,22 @@ function startFileServer() {
 
 # take this repo and copy it to somewhere else minus the .git stuff.
 function gitexport(){
-    mkdir -p "$1"
-    git archive master | tar -x -C "$1"
+  mkdir -p "$1"
+  git archive master | tar -x -C "$1"
 }
 
 # get gzipped size
 function gz() {
-    echo "orig size    (bytes): "
-    cat "$1" | wc -c
-    echo "gzipped size (bytes): "
-    gzip -c "$1" | wc -c
+  echo "orig size    (bytes): "
+  cat "$1" | wc -c
+  echo "gzipped size (bytes): "
+  gzip -c "$1" | wc -c
+}
 }
 
 # All the dig info
 function digga() {
-    dig +nocmd "$1" any +multiline +noall +answer
+  dig +nocmd "$1" any +multiline +noall +answer
 }
 
 # Man Command colorizer

@@ -97,7 +97,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'sickill/vim-pasta'
 
 " vim-snipmate default snippets
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'

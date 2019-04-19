@@ -60,3 +60,6 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 
 # Brew everything
 alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
+
+# file explorer that shows size
+alias s="ncdu"

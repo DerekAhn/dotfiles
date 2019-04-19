@@ -206,6 +206,14 @@ try
 catch
 endtry
 
+" This enables us to undo files even if you exit Vim.
+if has('persistent_undo')
+  set undofile
+  set undodir=~/.config/vim/tmp/undo//
+endif
+
+set autowrite
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " => TEXT, TAB, AND INDENT RELATED
@@ -353,6 +361,13 @@ map L $
 " Copy/Paste to clipboard
 map <leader>cc "+y
 map <leader>vv "+p
+
+" Enable to copy to clipboard for operations like yank, delete, change and put
+" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
+if has('unnamedplus')
+  set clipboard^=unnamed
+  set clipboard^=unnamedplus
+endif
 
 " Indent/Unindent
 noremap > >>

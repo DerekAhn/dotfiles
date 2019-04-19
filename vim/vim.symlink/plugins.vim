@@ -108,6 +108,9 @@ Plug 'SirVer/ultisnips'
 " Syntax support
 """"""""""""""""""""""""""""""
 
+" kubernetes syntax and snippet support
+" Plug 'andrewstuart/vim-kubernetes'
+
 " Go development plugin for Vim
 Plug 'fatih/vim-go'
 

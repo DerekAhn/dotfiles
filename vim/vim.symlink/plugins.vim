@@ -210,13 +210,13 @@ nnoremap <silent> <leader>af :call fzf#vim#files('',
       \ {'source': 'ag --hidden --ignore .git -f -g "" -u', 'down': '40%'})<CR>
 
 " Search MRU buffers
-nnoremap <silent> <leader>f :Buffers<CR>
-nnoremap <silent> <leader>` :Marks<CR>
+" nnoremap <silent> <leader>f :Buffers<CR>
+" nnoremap <silent> <leader>` :Marks<CR>
 
 " [Tags] Command to generate tags file
 " let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test'
-nnoremap <silent> <leader>t :Tags<CR>
-nnoremap <silent> <leader>b :BTags<CR>
+" nnoremap <silent> <leader>t :Tags<CR>
+" nnoremap <silent> <leader>b :BTags<CR>
 
 
 """"""""""""""""""""""""""""""

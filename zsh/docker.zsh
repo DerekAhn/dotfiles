@@ -26,6 +26,12 @@ alias di="docker image"
 # Get images
 alias dis="docker images"
 
+# list dangling images
+alias dilsd="docker images -f dangling=true"
+
+# Remove dangling images
+alias dirmd="docker rmi $(docker images -f dangling=true -q)"
+
 # Get container IP
 alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
 

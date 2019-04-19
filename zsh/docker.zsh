@@ -44,6 +44,12 @@ alias dki="docker run -i -t -P"
 # Execute interactive container, e.g., $dex base /bin/bash
 alias dex="docker exec -i -t"
 
+# Lis all exited containers
+alias dlse="docker ps -a -f status=exited"
+
+# Remove all exited containers
+alias drme="docker rm $(docker ps -a -f status=exited -q)"
+
 # Execute interactive container, e.g., $dex base /bin/bash
 alias dcu="docker-compose up"
 

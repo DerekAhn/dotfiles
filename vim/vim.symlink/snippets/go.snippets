@@ -16,6 +16,14 @@ snippet iferr
 	if err != nil {
 		${1}
 	}
+snippet if!
+	if ${1} != ${2} {
+		${3}
+	}
+snippet if=
+	if ${1} == ${2} {
+		${3}
+	}
 snippet <-
 	${2} <- ${1}
 snippet ast

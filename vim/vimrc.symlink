@@ -75,7 +75,6 @@ if has("gui_running")
   set noantialias
 else
   try
-    " colorscheme PaperColor
     colorscheme onedark
   catch
   endtry

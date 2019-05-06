@@ -38,7 +38,8 @@ set autoread
 
 " Fast editing of vimrc
 "map <leader>e :e! ~/.vimrc<cr>
-map <leader>e :e! ~/.dotfiles/vim/vim.symlink/snippets/go.snippets<cr>
+" map <leader>e :e! ~/.dotfiles/vim/vim.symlink/snippets/go.snippets<cr>
+map <leader>e :e! ~/projects/notes/vim-go-cheatsheet.md<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""

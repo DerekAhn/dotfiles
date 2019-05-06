@@ -64,6 +64,8 @@ alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 # file explorer that shows size
 alias s="ncdu"
 
+alias only1="git branch | grep -v \"master\" | xargs git branch -D"
+
 # Interactively add selected parts of files
 alias gaap="git add -p"
 alias gsp="git stash -p"

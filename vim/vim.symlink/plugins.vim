@@ -47,27 +47,27 @@ Plug 'troydm/zoomwintab.vim'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
-" The ultimate undo history visualizer for VIM
-" Plug 'mbbill/undotree'
-
-" EditorConfig plugin for Vim
-" Plug 'editorconfig/editorconfig-vim'
-
-" A Vim plugin for Prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-" Alignment for vim
-" Plug 'junegunn/vim-easy-align'
-
 " fzf  vim (Fuzzy file, buffer finder)
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Code search and view tool
 Plug 'dyng/ctrlsf.vim'
+
+" Vim motions on speed
+Plug 'easymotion/vim-easymotion'
+
+" Paste in Vim with indentation adjusted to destination context
+Plug 'sickill/vim-pasta'
+
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
+
+" A Vim plugin for Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'
@@ -84,23 +84,26 @@ Plug 'tpope/vim-surround'
 " Display indention levels with vertical lines
 Plug 'Yggdroot/indentLine'
 
+" The ultimate undo history visualizer for VIM
+" Plug 'mbbill/undotree'
+"
+" Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
+" EditorConfig plugin for Vim
+" Plug 'editorconfig/editorconfig-vim'
+
+" Alignment for vim
+" Plug 'junegunn/vim-easy-align'
+
 " Preview colors in source code
 " Plug 'ap/vim-css-color'
 
 " Emmet for vim
 " Plug 'mattn/emmet-vim'
-
-" Vim motions on speed
-Plug 'easymotion/vim-easymotion'
-
-" Paste in Vim with indentation adjusted to destination context
-Plug 'sickill/vim-pasta'
-
+"
 " vim-snipmate default snippets
 " Plug 'honza/vim-snippets'
-
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
 
 
 
@@ -108,17 +111,20 @@ Plug 'SirVer/ultisnips'
 " Syntax support
 """"""""""""""""""""""""""""""
 
-" kubernetes syntax and snippet support
-" Plug 'andrewstuart/vim-kubernetes'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
-" Typescript syntax files for Vim
-" Plug 'leafgarland/typescript-vim'
-
 " Vim syntax file & snippets for Docker's Dockerfile
 Plug 'ekalinin/Dockerfile.vim'
+
+" Markdown syntax highlighting
+Plug 'plasticboy/vim-markdown'
+
+" kubernetes syntax and snippet support
+" Plug 'andrewstuart/vim-kubernetes'
+
+" Typescript syntax files for Vim
+" Plug 'leafgarland/typescript-vim'
 
 " Javascript indentation and syntax support
 " Plug 'pangloss/vim-javascript'
@@ -129,20 +135,17 @@ Plug 'ekalinin/Dockerfile.vim'
 " CSS3 syntax support
 " Plug 'hail2u/vim-css3-syntax'
 
-" SCSS syntax highlighting
-" Plug 'cakebaker/scss-syntax.vim'
-
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'
-
-" Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown'
 
 " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 " Plug 'jparise/vim-graphql'
 
 " Improved nginx vim plugin (incl. syntax highlighting)
 " Plug 'chr4/nginx.vim'
+"
+" Vim syntax for TOML
+" Plug 'cespare/vim-toml'
 
 call plug#end()
 

@@ -205,6 +205,7 @@ endif
 " fzf
 """"""""""""""""""""""""""""""
 let g:fzf_layout = { 'down': '40%' }
+
 " Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
@@ -215,15 +216,16 @@ nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <leader>af :call fzf#vim#files('',
       \ {'source': 'ag --hidden --ignore .git -f -g "" -u', 'down': '40%'})<CR>
 
-" Search MRU buffers
-" nnoremap <silent> <leader>f :Buffers<CR>
-" nnoremap <silent> <leader>` :Marks<CR>
+function! FzfSpellSink(word)
+  exe 'normal! "_ciw'.a:word
+endfunction
 
-" [Tags] Command to generate tags file
-" let g:fzf_tags_command = 'ctags -R --exclude=.git --exclude=node_modules --exclude=test'
-" nnoremap <silent> <leader>t :Tags<CR>
-" nnoremap <silent> <leader>b :BTags<CR>
+function! FzfSpell()
+  let suggestions = spellsuggest(expand("<cword>"))
+  return fzf#run({'source': suggestions, 'sink': function("FzfSpellSink"), 'down': 10 })
+endfunction
 
+nnoremap z= :call FzfSpell()<CR>
 
 """"""""""""""""""""""""""""""
 " vim-easymotion

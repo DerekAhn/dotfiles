@@ -1,0 +1,1 @@
+alias ms="minishift"

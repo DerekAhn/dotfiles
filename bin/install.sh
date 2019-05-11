@@ -33,14 +33,14 @@ echo "Installing ack"
 brew install ack
 echo "Installing exa"
 brew install exa
+echo "Installing fpp"
+brew install fpp
 echo "Installing fzf"
 brew install fzf
+echo "Installing fx"
+brew install fx
 echo "Installing golang"
 brew install golang
-echo "Installing gotop"
-brew install gotop
-echo "Installing httpie"
-brew install httpie
 echo "Installing mtr - ping & traceroute. best"
 brew install mtr
   echo "allow mtr to run without sudo"
@@ -71,6 +71,8 @@ echo "Installing tmux"
 brew install tmux
 echo "Installing vim"
 brew install vim
+echo "Installing yamllint"
+brew install yamllint
 echo "Installing yarn"
 brew install yarn
 echo "Installing z"

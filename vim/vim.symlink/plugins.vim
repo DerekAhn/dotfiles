@@ -54,23 +54,14 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Code search and view tool
-Plug 'dyng/ctrlsf.vim'
-
-" Vim motions on speed
-Plug 'easymotion/vim-easymotion'
-
 " Paste in Vim with indentation adjusted to destination context
-Plug 'sickill/vim-pasta'
+" Plug 'sickill/vim-pasta'
 
 " UltiSnips - The ultimate snippet solution for Vim
 Plug 'SirVer/ultisnips'
 
 " A Vim plugin for Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
-" BufExplorer quickly and easily switch between buffer
-Plug 'jlanzarotta/bufexplorer'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
@@ -83,6 +74,16 @@ Plug 'tpope/vim-surround'
 
 " Display indention levels with vertical lines
 Plug 'Yggdroot/indentLine'
+
+" BufExplorer quickly and easily switch between buffer
+Plug 'jlanzarotta/bufexplorer'
+
+" Code search and view tool
+" Plug 'dyng/ctrlsf.vim'
+
+" Vim motions on speed
+" Plug 'easymotion/vim-easymotion'
+
 
 " The ultimate undo history visualizer for VIM
 " Plug 'mbbill/undotree'
@@ -190,15 +191,15 @@ let g:vim_markdown_folding_disabled = 1
 """"""""""""""""""""""""""""""
 " undotree
 """"""""""""""""""""""""""""""
-map <leader>u :UndotreeToggle<CR>
-let g:undotree_WindowLayout = 3
-let g:undotree_SplitWidth = 35
-let g:undotree_SetFocusWhenToggle = 1
+" map <leader>u :UndotreeToggle<CR>
+" let g:undotree_WindowLayout = 3
+" let g:undotree_SplitWidth = 35
+" let g:undotree_SetFocusWhenToggle = 1
 
-if has("persistent_undo")
-  set undodir='~/.undodir/'
-  set undofile
-endif
+" if has("persistent_undo")
+"   set undodir='~/.undodir/'
+"   set undofile
+" endif
 
 
 """"""""""""""""""""""""""""""
@@ -216,6 +217,10 @@ nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <leader>af :call fzf#vim#files('',
       \ {'source': 'ag --hidden --ignore .git -f -g "" -u', 'down': '40%'})<CR>
 
+" Map Rg for quick word search
+map <leader>f :Rg<CR>
+
+" Integrating with spell checking
 function! FzfSpellSink(word)
   exe 'normal! "_ciw'.a:word
 endfunction
@@ -226,25 +231,6 @@ function! FzfSpell()
 endfunction
 
 nnoremap z= :call FzfSpell()<CR>
-
-""""""""""""""""""""""""""""""
-" vim-easymotion
-""""""""""""""""""""""""""""""
-map s <Plug>(easymotion-s)
-map <leader>ss <Plug>(easymotion-s2)
-map <leader><leader><leader> <Plug>(easymotion-prefix)
-
-" match lower & upper case
-let g:EasyMotion_smartcase = 1
-
-let g:EasyMotion_use_smartsign_us = 1
-
-map <leader>l <Plug>(easymotion-lineforward)
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
-map <leader>h <Plug>(easymotion-linebackward)
-
-let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 
 
 """"""""""""""""""""""""""""""
@@ -293,12 +279,6 @@ let g:airline#extensions#default#section_truncate_width = {
 let g:UltiSnipsExpandTrigger="<C-Space>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
-
-""""""""""""""""""""""""""""""
-" vim-javascript
-""""""""""""""""""""""""""""""
-let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
-let g:javascript_plugin_flow = 1 " Enables syntax highlighting for Flow.
 
 """"""""""""""""""""""""""""""
 " vim-jsx
@@ -393,13 +373,6 @@ autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 " Zoomwintab
 """"""""""""""""""""""""""""""
 nnoremap <silent> <leader>z :ZoomWinTabToggle<cr>
-
-""""""""""""""""""""""""""""""
-" Prettier
-""""""""""""""""""""""""""""""
-
-" Override default with async cuz vim8/neovim
-" nmap <Leader>p <Plug>(PrettierAsync)
 
 """"""""""""""""""""""""""""""
 " Vim-go

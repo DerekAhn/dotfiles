@@ -51,9 +51,6 @@ Plug 'airblade/vim-gitgutter'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
-" Asynchronous completion for neovim
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
-
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 

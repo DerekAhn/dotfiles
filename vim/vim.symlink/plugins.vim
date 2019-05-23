@@ -102,20 +102,11 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
-" Markdown syntax highlighting
-Plug 'plasticboy/vim-markdown'
-
 " Typescript syntax files for Vim
 " Plug 'leafgarland/typescript-vim'
 
-" Javascript indentation and syntax support
-" Plug 'pangloss/vim-javascript'
-
 " React JSX syntax highlighting & indenting
 " Plug 'mxw/vim-jsx'
-
-" CSS3 syntax support
-" Plug 'hail2u/vim-css3-syntax'
 
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'
@@ -125,7 +116,7 @@ Plug 'plasticboy/vim-markdown'
 
 " Improved nginx vim plugin (incl. syntax highlighting)
 " Plug 'chr4/nginx.vim'
-"
+
 " Vim syntax for TOML
 " Plug 'cespare/vim-toml'
 
@@ -185,35 +176,6 @@ function! LinterStatus() abort
 endfunction
 
 set statusline=%{LinterStatus()}
-
-
-""""""""""""""""""""""""""""""
-" Deoplete
-""""""""""""""""""""""""""""""
-" Enable deoplete.
-let g:deoplete#enable_at_startup = 1
-
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
-
-augroup omnifuncs
-  autocmd!
-  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=tern#Complete
-augroup end
-
-let g:tern_request_timeout = 1
-let g:tern_show_argument_hints = 'on_hold'
-let g:tern_show_signature_in_pum = 0
-
-let g:python_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
-" Automatically close preview window after autocompletion
-autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
 """"""""""""""""""""""""""""""

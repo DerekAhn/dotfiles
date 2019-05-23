@@ -41,6 +41,10 @@ echo "Installing fx"
 brew install fx
 echo "Installing golang"
 brew install golang
+echo "Installing k9s"
+brew tap derailed/k9s && brew install k9s
+echo "Installing kubectl"
+brew install kubectl
 echo "Installing mtr - ping & traceroute. best"
 brew install mtr
   echo "allow mtr to run without sudo"

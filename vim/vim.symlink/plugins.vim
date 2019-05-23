@@ -236,9 +236,8 @@ nnoremap z= :call FzfSpell()<CR>
 """"""""""""""""""""""""""""""
 " vim-fugitive
 """"""""""""""""""""""""""""""
-map <leader>gg :GitGutterToggle<CR>
-map <leader>gs :Gstatus<CR>
-set diffopt+=vertical
+" Show commits for every source line
+nnoremap <Leader>gb :Gblame<CR>  " git blame
 
 
 """"""""""""""""""""""""""""""

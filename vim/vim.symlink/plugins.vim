@@ -60,6 +60,9 @@ Plug 'jlanzarotta/bufexplorer'
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 
+" Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
 " fzf  vim (Fuzzy file, buffer finder)
 " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -176,6 +179,35 @@ function! LinterStatus() abort
 endfunction
 
 set statusline=%{LinterStatus()}
+
+
+""""""""""""""""""""""""""""""
+" Deoplete
+""""""""""""""""""""""""""""""
+" Enable deoplete.
+let g:deoplete#enable_at_startup = 1
+
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
+
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=tern#Complete
+augroup end
+
+let g:tern_request_timeout = 1
+let g:tern_show_argument_hints = 'on_hold'
+let g:tern_show_signature_in_pum = 0
+
+let g:python_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
+" Automatically close preview window after autocompletion
+autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
 """"""""""""""""""""""""""""""

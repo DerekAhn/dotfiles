@@ -99,29 +99,35 @@ Plug 'troydm/zoomwintab.vim'
 " Syntax support
 """"""""""""""""""""""""""""""
 
-" Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-
-" Go development plugin for Vim
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-
-" Typescript syntax files for Vim
-" Plug 'leafgarland/typescript-vim'
-
-" React JSX syntax highlighting & indenting
-" Plug 'mxw/vim-jsx'
-
-" Syntax for styled-components
-" Plug 'styled-components/vim-styled-components'
-
-" A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
-" Plug 'jparise/vim-graphql'
+" Vim syntax file & snippets for Docker's Dockerfile
+" Plug 'ekalinin/Dockerfile.vim'
 
 " Improved nginx vim plugin (incl. syntax highlighting)
 " Plug 'chr4/nginx.vim'
 
+" Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
+" A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
+" Plug 'jparise/vim-graphql'
+"
+" Javascript indentation and syntax support
+" Plug 'pangloss/vim-javascript'
+
+" React JSX syntax highlighting & indenting
+" Plug 'mxw/vim-jsx'
+
+" vim-snipmate default snippets
+" Plug 'honza/vim-snippets'
+
+" Syntax for styled-components
+" Plug 'styled-components/vim-styled-components'
+"
 " Vim syntax for TOML
 " Plug 'cespare/vim-toml'
+
+" Typescript syntax files for Vim
+" Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 

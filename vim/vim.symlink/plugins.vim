@@ -5,16 +5,23 @@
 call plug#begin('~/.vim/plugged')
 
 """"""""""""""""""""""""""""""
-" Editor Config
+" Editor UI
 """"""""""""""""""""""""""""""
-" Asynchronous completion for neovim
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 
-" Tree explorer for vim.
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Lean & mean status/tabline
+Plug 'vim-airline/vim-airline'
+
+" Add filetype glyphs (icons)
+Plug 'ryanoasis/vim-devicons'
+
+" A collection of themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
 
 " Color Scheme
 Plug 'joshdick/onedark.vim'
+
+" Tree explorer for vim.
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Tmux statusline generator with support for airline
 Plug 'edkolev/tmuxline.vim'
@@ -22,49 +29,49 @@ Plug 'edkolev/tmuxline.vim'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
-" Add filetype glyphs (icons)
-Plug 'ryanoasis/vim-devicons'
 
-" Lean & mean status/tabline
-Plug 'vim-airline/vim-airline'
+""""""""""""""""""""""""""""""
+" Editor Git
+""""""""""""""""""""""""""""""
 
-" A collection of themes for vim-airline
-Plug 'vim-airline/vim-airline-themes'
-
-" Shows a git diff in the gutter
-Plug 'airblade/vim-gitgutter'
+" From a very single vim buffer, you can perform main git operations in few key press.
+Plug 'jreybert/vimagit'
 
 " Git wrapper
 Plug 'tpope/vim-fugitive'
 
-" Zoom in/out of windows
-Plug 'troydm/zoomwintab.vim'
+" Shows a git diff in the gutter
+Plug 'airblade/vim-gitgutter'
 
 
 """"""""""""""""""""""""""""""
 " Editor Utils
 """"""""""""""""""""""""""""""
+
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
+
+" Asynchronous completion for neovim
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'  }
 
 " Insert or delete brackets, parens, quotes in pair
 Plug 'jiangmiao/auto-pairs'
 
-" fzf  vim (Fuzzy file, buffer finder)
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" Paste in Vim with indentation adjusted to destination context
-" Plug 'sickill/vim-pasta'
-
-" UltiSnips - The ultimate snippet solution for Vim
-Plug 'SirVer/ultisnips'
-
-" A Vim plugin for Prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" BufExplorer quickly and easily switch between buffer
+Plug 'jlanzarotta/bufexplorer'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
+
+" fzf  vim (Fuzzy file, buffer finder)
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+" Display indention levels with vertical lines
+Plug 'Yggdroot/indentLine'
+
+" A Vim plugin for Prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Enable repeating supported plugin maps
 Plug 'tpope/vim-repeat'
@@ -72,27 +79,11 @@ Plug 'tpope/vim-repeat'
 " Quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
 
-" Display indention levels with vertical lines
-Plug 'Yggdroot/indentLine'
+" UltiSnips - The ultimate snippet solution for Vim
+Plug 'SirVer/ultisnips'
 
-" BufExplorer quickly and easily switch between buffer
-Plug 'jlanzarotta/bufexplorer'
-
-" Code search and view tool
-" Plug 'dyng/ctrlsf.vim'
-
-" Vim motions on speed
-" Plug 'easymotion/vim-easymotion'
-
-
-" The ultimate undo history visualizer for VIM
-" Plug 'mbbill/undotree'
-"
-" Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-
-" EditorConfig plugin for Vim
-" Plug 'editorconfig/editorconfig-vim'
+" Zoom in/out of windows
+Plug 'troydm/zoomwintab.vim'
 
 " Alignment for vim
 " Plug 'junegunn/vim-easy-align'

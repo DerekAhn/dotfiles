@@ -173,20 +173,6 @@ let g:vim_markdown_folding_disabled = 1
 
 
 """"""""""""""""""""""""""""""
-" undotree
-""""""""""""""""""""""""""""""
-" map <leader>u :UndotreeToggle<CR>
-" let g:undotree_WindowLayout = 3
-" let g:undotree_SplitWidth = 35
-" let g:undotree_SetFocusWhenToggle = 1
-
-" if has("persistent_undo")
-"   set undodir='~/.undodir/'
-"   set undofile
-" endif
-
-
-""""""""""""""""""""""""""""""
 " fzf
 """"""""""""""""""""""""""""""
 let g:fzf_layout = { 'down': '40%' }

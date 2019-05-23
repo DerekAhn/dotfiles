@@ -41,6 +41,8 @@ echo "Installing fx"
 brew install fx
 echo "Installing golang"
 brew install golang
+echo "Installing grpcurl"
+brew install grpcurl
 echo "Installing k9s"
 brew tap derailed/k9s && brew install k9s
 echo "Installing kubectl"

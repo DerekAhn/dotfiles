@@ -365,6 +365,16 @@ let g:vim_markdown_folding_disabled = 1
 
 
 """"""""""""""""""""""""""""""
+" vimagit
+""""""""""""""""""""""""""""""
+
+nnoremap <leader>gst :Magit<CR>       " git status
+nnoremap <leader>gP :! git push<CR>  " git Push
+" Enable deletion of untracked files in Magit
+let g:magit_discard_untracked_do_delete=1
+
+
+""""""""""""""""""""""""""""""
 " Ultisnips
 """"""""""""""""""""""""""""""
 " Trigger configuration

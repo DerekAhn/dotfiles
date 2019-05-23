@@ -96,8 +96,8 @@ Plug 'troydm/zoomwintab.vim'
 " Syntax support
 """"""""""""""""""""""""""""""
 
-" Vim syntax file & snippets for Docker's Dockerfile
-Plug 'ekalinin/Dockerfile.vim'
+" Intellisense engine for vim8 & neovim, full language server protocol support as VSCode
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }

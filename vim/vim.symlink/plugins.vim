@@ -241,16 +241,22 @@ nnoremap <Leader>gb :Gblame<CR>  " git blame
 
 
 """"""""""""""""""""""""""""""
-" CtrlSF
+" vim-gitgutter
 """"""""""""""""""""""""""""""
-" Prompt CtrlSF using ALT+f
-nmap ƒ <Plug>CtrlSFPrompt
-vmap ƒ <Plug>CtrlSFVwordPath
+map <leader>gg :GitGutterToggle<CR>
+map <leader>gs :Gstatus<CR>
+set diffopt+=vertical
 
-" Toggle CtrlSF result display
-map † :CtrlSFToggle<CR>
+" Update sign column every quarter second
+set updatetime=250
 
-let g:ctrlsf_indent = 2
+" Jump between hunks
+nmap <Leader>gn <Plug>GitGutterNextHunk
+nmap <Leader>gp <Plug>GitGutterPrevHunk
+
+" Hunk-add and hunk-revert for chunk staging
+nmap <Leader>ga <Plug>GitGutterStageHunk
+nmap <Leader>gu <Plug>GitGutterUndoHunk
 
 
 """"""""""""""""""""""""""""""
@@ -334,11 +340,6 @@ endfunction
 
 set statusline=%{LinterStatus()}
 
-
-""""""""""""""""""""""""""""""
-" EditorConfig
-""""""""""""""""""""""""""""""
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 """"""""""""""""""""""""""""""
 " Deoplete

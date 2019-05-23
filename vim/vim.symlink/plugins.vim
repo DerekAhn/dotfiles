@@ -93,27 +93,20 @@ Plug 'troydm/zoomwintab.vim'
 
 " Emmet for vim
 " Plug 'mattn/emmet-vim'
-"
-" vim-snipmate default snippets
-" Plug 'honza/vim-snippets'
-
 
 
 """"""""""""""""""""""""""""""
 " Syntax support
 """"""""""""""""""""""""""""""
 
-" Go development plugin for Vim
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-
 " Vim syntax file & snippets for Docker's Dockerfile
 Plug 'ekalinin/Dockerfile.vim'
 
+" Go development plugin for Vim
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
 " Markdown syntax highlighting
 Plug 'plasticboy/vim-markdown'
-
-" kubernetes syntax and snippet support
-" Plug 'andrewstuart/vim-kubernetes'
 
 " Typescript syntax files for Vim
 " Plug 'leafgarland/typescript-vim'

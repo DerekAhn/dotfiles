@@ -1,5 +1,7 @@
 alias k='kubectl'
 
+alias kctx='kubectl config use-context $(kubectl config get-contexts -o=name | fzf)'
+
 # config things
 alias kconf='kubectl config'
 alias kconfs='kubectl config get-contexts'

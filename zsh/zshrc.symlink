@@ -1,15 +1,17 @@
-export DOTFILES=$HOME/.dotfiles
-export zsh=$DOTFILES/zsh
-
-for config ($zsh/**/*.zsh) source $config
-
+for config ($HOME/.dotfiles/zsh/**/*.zsh) source $config
 ZSH_THEME="spaceship"
+source $HOME/.oh-my-zsh/oh-my-zsh.sh
 
-# NeoVim Settings
+# So that git plugin works
+source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+source ~/.oh-my-zsh/plugins/systemd/systemd.plugin.zsh
+
+
+# NeoVim
+# ---------------
 export EDITOR='nvim'
 
-export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 # Go Lang
 # ---------------
@@ -43,3 +45,6 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
 
+# Iterm2 shell intergration
+# ---------------
+source ~/.iterm2_shell_integration.`basename $SHELL`

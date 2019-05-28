@@ -5,3 +5,4 @@ plugged
 vim/vim.symlink/.vim
 .netrwhist
 tpm
+aruba.zsh

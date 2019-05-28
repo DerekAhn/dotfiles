@@ -430,6 +430,12 @@ vnoremap <leader>d "_d
 " Quick macro invocation with q register
 nnoremap Q @q
 
+"Tab to switch to next open buffer
+nnoremap <Tab> :bnext<cr>
+
+"Shift + Tab to switch to previous open buffer
+nnoremap <S-Tab> :bprevious<cr>
+
 " Switch between the last two files
 nnoremap <leader><leader> <C-^>
 

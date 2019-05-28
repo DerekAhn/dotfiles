@@ -39,22 +39,7 @@ fi
 # fzf key bindings
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Initialize iterm2 shell intergration
-# ---------------
-source ~/.iterm2_shell_integration.`basename $SHELL`
-
-
 # Auto-completion
-# ---------------
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
-# So that git plugin works
-source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
-source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
-source ~/.oh-my-zsh/plugins/systemd/systemd.plugin.zsh
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/orion/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/orion/google-cloud-sdk/path.zsh.inc'; fi
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/orion/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/orion/google-cloud-sdk/completion.zsh.inc'; fi

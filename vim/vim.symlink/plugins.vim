@@ -38,7 +38,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'jreybert/vimagit'
 
 " Git wrapper
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 " Shows a git diff in the gutter
 Plug 'airblade/vim-gitgutter'
@@ -296,7 +296,7 @@ let g:airline#extensions#default#section_truncate_width = {
 " vim-fugitive
 """"""""""""""""""""""""""""""
 " Show commits for every source line
-nnoremap <Leader>gb :Gblame<CR>  " git blame
+" nnoremap <Leader>gb :Gblame<CR>  " git blame
 
 
 """"""""""""""""""""""""""""""

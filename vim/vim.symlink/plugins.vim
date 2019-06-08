@@ -35,7 +35,7 @@ Plug 'christoomey/vim-tmux-navigator'
 """"""""""""""""""""""""""""""
 
 " From a very single vim buffer, you can perform main git operations in few key press.
-Plug 'jreybert/vimagit'
+" Plug 'jreybert/vimagit'
 
 " Git wrapper
 " Plug 'tpope/vim-fugitive'
@@ -52,7 +52,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 
 " Insert or delete brackets, parens, quotes in pair
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 " BufExplorer quickly and easily switch between buffer
 Plug 'jlanzarotta/bufexplorer'
@@ -64,7 +64,6 @@ Plug 'tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " fzf  vim (Fuzzy file, buffer finder)
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Display indention levels with vertical lines
@@ -99,35 +98,17 @@ Plug 'troydm/zoomwintab.vim'
 " Syntax support
 """"""""""""""""""""""""""""""
 
-" Vim syntax file & snippets for Docker's Dockerfile
-" Plug 'ekalinin/Dockerfile.vim'
-
-" Improved nginx vim plugin (incl. syntax highlighting)
-" Plug 'chr4/nginx.vim'
-
 " Go development plugin for Vim
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " A Vim plugin that provides GraphQL file detection, syntax highlighting, and indentation.
 " Plug 'jparise/vim-graphql'
-"
-" Javascript indentation and syntax support
-" Plug 'pangloss/vim-javascript'
 
-" React JSX syntax highlighting & indenting
-" Plug 'mxw/vim-jsx'
-
-" vim-snipmate default snippets
-" Plug 'honza/vim-snippets'
+" A solid language pack for Vim.
+Plug 'sheerun/vim-polyglot'
 
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'
-"
-" Vim syntax for TOML
-" Plug 'cespare/vim-toml'
-
-" Typescript syntax files for Vim
-" Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -279,7 +260,6 @@ map <C-e> :NERDTreeToggle<CR>
 """"""""""""""""""""""""""""""
 let g:airline#extensions#branch#displayed_head_limit = 10
 let g:airline_powerline_fonts = 1
-" let g:airline_theme="badwolf"
 let g:airline_theme="bubblegum"
 
 " Automatically truncate sections

@@ -1,0 +1,31 @@
+
+snippet des "Describe (js)"
+	describe('${1:description}', () => {
+		$0
+	});
+
+snippet it "it"
+	test('It should ${1:description}', () => {
+		$0
+	});
+
+snippet exp "expect"
+	expect(${1:target})$0;
+
+snippet ee "expect to equal"
+	expect(${1:target}).toEqual(${2:value});
+
+snippet et "expect to equal"
+	expect(${1:target}).toBeTruthy();
+
+snippet ef "expect to equal"
+	expect(${1:target}).toBeFalsy();
+
+snippet eb "expect to be"
+	expect(${1:target}).toBe(${2:value});
+
+snippet em "expect to match"
+	expect(${1:target}).toMatch(${2:pattern});
+
+snippet en "expect to be null"
+	expect(${1:target}).toBeNull();

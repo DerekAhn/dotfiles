@@ -511,6 +511,8 @@ inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<Left>
 inoremap " ""<Left>
+inoremap ' ''<Left>
+inoremap ` ``<Left>
 
 " Toggle quotes for json file
 function! ConcealJsonToggle()

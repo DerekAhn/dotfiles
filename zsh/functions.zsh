@@ -14,18 +14,6 @@ function cd {
   builtin cd "$@" && ls
 }
 
-# find shorthand
-function f() {
-  find . -name "$1"
-}
-
-# Start an HTTP server from a directory, optionally specifying the port
-function startFileServer() {
-  local port="${1:-8000}"
-  open "http://localhost:${port}/"
-  http-server -p 8000
-}
-
 # take this repo and copy it to somewhere else minus the .git stuff.
 function gitexport(){
   mkdir -p "$1"

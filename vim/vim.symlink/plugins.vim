@@ -191,8 +191,8 @@ let g:tern_request_timeout = 1
 let g:tern_show_argument_hints = 'on_hold'
 let g:tern_show_signature_in_pum = 0
 
-let g:python_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.3/bin/python3'
+let g:python_host_prog = '/usr/local/Cellar/python/3.7.4/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.4/bin/python3'
 " Automatically close preview window after autocompletion
 autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -250,6 +250,7 @@ let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeIgnore = ['\.js.map$', '\.DS_Store$']
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 25
+let g:NERDTreeCascadeSingleChildDir = 0
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 map <C-e> :NERDTreeToggle<CR>
@@ -277,6 +278,11 @@ let g:airline#extensions#default#section_truncate_width = {
 """"""""""""""""""""""""""""""
 " Show commits for every source line
 " nnoremap <Leader>gb :Gblame<CR>  " git blame
+
+" Fugitive Conflict Resolution
+" nnoremap <leader>gd :Gvdiff<CR>
+" nnoremap gdh :diffget //2<CR>
+" nnoremap gdl :diffget //3<CR>
 
 
 """"""""""""""""""""""""""""""
@@ -338,7 +344,8 @@ augroup go
   " :GoTest
   autocmd FileType go nmap <leader>t  <Plug>(go-test)
   " :GoRun
-  autocmd FileType go nmap <leader>r  <Plug>(go-run)
+  " autocmd FileType go nmap <leader>r  <Plug>(go-run)
+  autocmd FileType go nmap <leader>g  <Plug>(go-run)
   " :GoDoc
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
   " :GoCoverageToggle

@@ -276,17 +276,16 @@ if has('nvim')
 endif
 
 " Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
+map <leader>bb :Bclose<cr>
+map <leader>be :Buffers<cr>
+map <leader>bl :BLines<cr>
+map <leader>h :History<cr>
 
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
 
 " Specify the behavior when switching between buffers
 try

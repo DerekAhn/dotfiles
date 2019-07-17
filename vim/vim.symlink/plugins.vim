@@ -405,3 +405,11 @@ let g:UltiSnipsJumpBackwardTrigger="<S-Tab>"
 " Zoomwintab
 """"""""""""""""""""""""""""""
 nnoremap <silent> <leader>z :ZoomWinTabToggle<cr>
+
+""""""""""""""""""""""""""""""
+" vim-devicons
+""""""""""""""""""""""""""""""
+let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''

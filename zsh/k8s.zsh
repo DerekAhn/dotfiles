@@ -11,14 +11,17 @@ alias khome='kubectl config use-context docker-for-desktop'
 
 # Get things
 alias kg='kubectl get'
+alias kd='kubectl delete'
 alias kgall='kubectl get deploy,svc,pods'
 alias kaf='kubectl apply -f'
 alias kcf='kubectl create -f'
 alias kdf='kubectl delete -f'
 alias kdes='kubectl describe'
-alias kgc='kubectl get cronjobs'
+alias kgcr='kubectl get cronjobs'
+alias kgc='kubectl get configmaps'
 alias kge='kubectl get endpoints'
 alias kgd='kubectl get deploy'
+alias kgi='kubectl get ingress'
 alias kgj='kubectl get jbos'
 alias kgp='kubectl get pods'
 alias kgn='kubectl get nodes'
@@ -43,8 +46,7 @@ alias kl='kubectl logs '
 alias klf='kubectl logs -f'
 alias kx='kubectl exec -i -t'
 
-# Save this in bash.rc or zsh.rc, update the file path if needed.
-# Usage: kube clusterA
-function kube() {
-  export KUBECONFIG=~/k8sconfig/${1}/kubeconfig
+function kgpn() {
+  kubectl get pods -n $1 -owide --show-labels | fzf
+}
 }

@@ -559,3 +559,6 @@ call NERDTreeHighlightFile('png', 36, 'none', '#15A274', '#15A274')
 
 " indentation lines for golang
 set list lcs=tab:\|\
+
+" Kubeval k8s manifests
+map <leader>k8 :!kubeval %<cr>

@@ -29,6 +29,9 @@ Plug 'edkolev/tmuxline.vim'
 " Seamless navigation between tmux panes and vim splits
 Plug 'christoomey/vim-tmux-navigator'
 
+" Display indention levels with vertical lines
+Plug 'Yggdroot/indentLine'
+
 
 """"""""""""""""""""""""""""""
 " Editor Git
@@ -51,11 +54,8 @@ Plug 'airblade/vim-gitgutter'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
-" Insert or delete brackets, parens, quotes in pair
-" Plug 'jiangmiao/auto-pairs'
-
 " BufExplorer quickly and easily switch between buffer
-Plug 'jlanzarotta/bufexplorer'
+" Plug 'jlanzarotta/bufexplorer'
 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
@@ -65,9 +65,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " fzf  vim (Fuzzy file, buffer finder)
 Plug 'junegunn/fzf.vim'
-
-" Display indention levels with vertical lines
-Plug 'Yggdroot/indentLine'
 
 " A Vim plugin for Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -106,6 +103,9 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
+
+" Markdown Vim Mode http://plasticboy.com/markdown-vim-mode/
+Plug 'plasticboy/vim-markdown'
 
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'

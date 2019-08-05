@@ -54,9 +54,6 @@ Plug 'airblade/vim-gitgutter'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
-" BufExplorer quickly and easily switch between buffer
-" Plug 'jlanzarotta/bufexplorer'
-
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 
@@ -103,9 +100,6 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
-
-" Markdown Vim Mode http://plasticboy.com/markdown-vim-mode/
-Plug 'plasticboy/vim-markdown'
 
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'
@@ -376,17 +370,19 @@ function! s:build_go_files()
   endif
 endfunction
 
+""""""""""""""""""""""""""""""
+" vimagit
+""""""""""""""""""""""""""""""
+" nnoremap <leader>gst :Magit<CR>       " git status
+" nnoremap <leader>gP :! git push<CR>  " git Push
+" Enable deletion of untracked files in Magit
+" let g:magit_discard_untracked_do_delete=1
+
 
 """"""""""""""""""""""""""""""
-" vim-jsx
+" vim-polyglot
 """"""""""""""""""""""""""""""
-let g:jsx_ext_required = 0 " Allow JSX in normal JS files
-
-
-""""""""""""""""""""""""""""""
-" vim-markdown
-""""""""""""""""""""""""""""""
-let g:vim_markdown_folding_disabled = 1
+let g:polyglot_disabled = ['go']
 
 
 """"""""""""""""""""""""""""""

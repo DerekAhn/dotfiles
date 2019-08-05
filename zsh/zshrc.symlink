@@ -26,6 +26,10 @@ export PATH=$PATH:$GOPATH/bin
 # ---------------
 export PATH="$(yarn global bin):$PATH"
 
+# Vim silicon-plugin
+# ---------------
+export PATH="$PATH:$CARGO_HOME/bin"
+
 
 # Syntax highlighter
 # ---------------

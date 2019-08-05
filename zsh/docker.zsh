@@ -83,3 +83,9 @@ dbash() { docker exec -it $(docker ps -aqf "name=$1") bash; }
 alias lzy=lazydocker
 
 alias dpf='docker ps --format="ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"'
+
+# github 📦 registry
+# image id, repo, version
+function pkgtag() {
+  docker tag $1 docker.pkg.github.com/derekahn/$2/$2:$3
+}

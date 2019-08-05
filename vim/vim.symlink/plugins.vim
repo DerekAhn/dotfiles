@@ -87,6 +87,9 @@ Plug 'troydm/zoomwintab.vim'
 " Emmet for vim
 " Plug 'mattn/emmet-vim'
 
+" Vim plugin for generating images of source code
+" using https://github.com/Aloxaf/silicon
+Plug 'segeljakt/vim-silicon'
 
 """"""""""""""""""""""""""""""
 " Syntax support
@@ -386,13 +389,23 @@ let g:polyglot_disabled = ['go']
 
 
 """"""""""""""""""""""""""""""
-" vimagit
+" vim-silicon
 """"""""""""""""""""""""""""""
-
-nnoremap <leader>gst :Magit<CR>       " git status
-nnoremap <leader>gP :! git push<CR>  " git Push
-" Enable deletion of untracked files in Magit
-let g:magit_discard_untracked_do_delete=1
+let g:silicon = {
+  \ 'theme':              'OneHalfDark',
+  \ 'font':                  'Hack',
+  \ 'background':         '#aaaaff',
+  \ 'shadow-color':       '#555555',
+  \ 'line-pad':                   2,
+  \ 'pad-horiz':                 80,
+  \ 'pad-vert':                 100,
+  \ 'shadow-blur-radius':         0,
+  \ 'shadow-offset-x':            0,
+  \ 'shadow-offset-y':            0,
+  \ 'line-number':           v:true,
+  \ 'round-corner':          v:true,
+  \ 'window-controls':       v:true,
+  \ }
 
 
 """"""""""""""""""""""""""""""

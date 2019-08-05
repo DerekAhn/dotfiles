@@ -425,7 +425,10 @@ nnoremap <silent> <leader>z :ZoomWinTabToggle<cr>
 """"""""""""""""""""""""""""""
 " vim-devicons
 """"""""""""""""""""""""""""""
+let g:webdevicons_enable_airline_statusline = 1
+
 let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsDefaultFolderOpenSymbol = ''
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsOS = 'Darwin'

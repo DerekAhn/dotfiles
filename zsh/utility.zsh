@@ -7,9 +7,6 @@ alias listDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.Qu
 alias clearDownloadLog="sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 alias wifiHistory="defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences |grep LastConnected -A 7"
 
-# Clear terminal files
-alias terminal-clean='sudo rm -f /private/var/log/asl/*.asl'
-
 # Helpers
 alias grep='grep --color=auto'
 alias df='df -h' # disk free, in Gigabytes, not bytes
@@ -18,17 +15,8 @@ alias du='du -h -c' # calculate disk usage for a folder
 alias catPubKey='cat ~/.ssh/id_rsa.pub'
 alias getPubKey='cat ~/.ssh/id_rsa.pub | pbcopy'
 
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en0"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
-
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache"
-
-# View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Trim new lines and copy to clipboard
 alias trimcopy="tr -d '\n' | pbcopy"
@@ -36,16 +24,9 @@ alias trimcopy="tr -d '\n' | pbcopy"
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-# File size
-alias fs="stat -f \"%z bytes\""
-
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-# Show/Hide finder hidden files
-alias showHidden='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideHidden='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
 alias stfu="osascript -e 'set volume output muted true'"
@@ -61,18 +42,19 @@ alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chro
 # Brew everything
 alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 
-# file explorer that shows size
-alias s="ncdu"
+alias listAllNodeModules="cd ~/projects && find . -name "node_modules" -type d -prune | xargs du -chs"
+alias cleanNodeModules="cd ~/projects && find . -name "node_modules" -type d -prune -exec rm -rf '{}' +"
 
-alias only1="git branch | grep -v \"master\" | xargs git branch -D"
+alias cat="nyan"
 
-# Interactively add selected parts of files
-alias gaap="git add -p"
-alias gsp="git stash -p"
-
-# git whatchanged
-gwtf() {
-  git whatchanged --since="$1"
+# Man Command colorizer
+man() {
+	env \
+		LESS_TERMCAP_md=$'\e[1;36m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[1;40;92m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_us=$'\e[1;32m' \
+			man "$@"
 }
-
-alias gitrecent="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'"

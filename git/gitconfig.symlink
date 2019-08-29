@@ -27,3 +27,5 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[alias]
+  done = "!f() { git checkout master && git branch -d @{-1}; }; f"

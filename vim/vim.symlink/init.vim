@@ -506,12 +506,12 @@ function! <SID>BufcloseCloseIt()
 endfunction
 
 "autoclose tags
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
-inoremap " ""<Left>
-inoremap ' ''<Left>
-inoremap ` ``<Left>
+" inoremap ( ()<Left>
+" inoremap { {}<Left>
+" inoremap [ []<Left>
+" inoremap " ""<Left>
+" inoremap ' ''<Left>
+" inoremap ` ``<Left>
 
 " Toggle quotes for json file
 function! ConcealJsonToggle()

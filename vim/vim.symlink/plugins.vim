@@ -54,6 +54,9 @@ Plug 'airblade/vim-gitgutter'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 
+" Vim plugin, insert or delete brackets, parens, quotes in pair
+Plug 'jiangmiao/auto-pairs'
+
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 

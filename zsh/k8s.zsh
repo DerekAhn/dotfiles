@@ -46,6 +46,14 @@ alias kl='kubectl logs '
 alias klf='kubectl logs -f'
 alias kx='kubectl exec -i -t'
 
+function kexec () {
+  exec_pod=`kubectl get pods --field-selector 'status.phase!=Failed' | grep ${1} | cut -d" " -f 1 | head -1`
+  echo "Executing ${2} in ${exec_pod} at `kubectl config view -o=jsonpath='{.current-context}'`"
+  echo ""
+
+  kubectl exec $exec_pod -c $2 -it $3
+  unset exec_pod
+}
 function kgpn() {
   kubectl get pods -n $1 -owide --show-labels | fzf
 }

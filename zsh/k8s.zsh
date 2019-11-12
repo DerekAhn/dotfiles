@@ -54,7 +54,27 @@ function kexec () {
   kubectl exec $exec_pod -c $2 -it $3
   unset exec_pod
 }
+
+# TMP
+function autoappTunnel() {
+  PORT="$1"
+  ssh dahn@bastion -L ${PORT}:localhost:${PORT}
+}
+
 function kgpn() {
   kubectl get pods -n $1 -owide --show-labels | fzf
 }
+
+function orionTunnel() {
+  PORT="$1"
+  ssh ubuntu@10.30.8.222 -L ${PORT}:localhost:${PORT}
+}
+
+function orionTunnel() {
+  PORT="$1"
+  ssh ubuntu@10.30.8.222 -L ${PORT}:localhost:${PORT}
+}
+
+function score() {
+  kube-score score $1
 }

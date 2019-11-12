@@ -16,7 +16,7 @@
 [merge]
   tool = Kaleidoscope
 [mergetool "Kaleidoscope"]
-  path = /Applications/Kaleidoscope.app/Contents/MacOS/Kaleidoscope
+  path = /Applications/Fork.app/Contents/MacOS/Fork
 [mergetool]
   prompt = false
 [push]

@@ -107,6 +107,10 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 " A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
 
+" basic vim/terraform integration
+" Plug 'hashivim/vim-terraform'
+" Plug 'juliosueiras/vim-terraform-completion'
+
 " Syntax for styled-components
 " Plug 'styled-components/vim-styled-components'
 
@@ -191,8 +195,8 @@ let g:tern_request_timeout = 1
 let g:tern_show_argument_hints = 'on_hold'
 let g:tern_show_signature_in_pum = 0
 
-let g:python_host_prog = '/usr/local/Cellar/python/3.7.4/bin/python3'
-let g:python3_host_prog = '/usr/local/Cellar/python/3.7.4/bin/python3'
+let g:python_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
+let g:python3_host_prog = '/usr/local/Cellar/python/3.7.5/bin/python3'
 " Automatically close preview window after autocompletion
 autocmd CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -379,7 +383,7 @@ endfunction
 """"""""""""""""""""""""""""""
 " vimagit
 """"""""""""""""""""""""""""""
-" nnoremap <leader>gst :Magit<CR>       " git status
+"p nnoremap <leader>gst :Magit<CR>       " git status
 " nnoremap <leader>gP :! git push<CR>  " git Push
 " Enable deletion of untracked files in Magit
 " let g:magit_discard_untracked_do_delete=1
@@ -435,3 +439,16 @@ let g:DevIconsDefaultFolderOpenSymbol = ''
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsOS = 'Darwin'
+
+
+""""""""""""""""""""""""""""""
+" vim-terraform
+""""""""""""""""""""""""""""""
+" Allow vim-terraform to align settings automatically with Tabularize.
+let g:terraform_align=1
+" Allow vim-terraform to automatically format *.tf and *.tfvars files with terraform fmt. You can also do this manually with the :TerraformFmt command.
+let g:terraform_fmt_on_save=1
+" (Optional) Enable terraform plan to be include in filter
+let g:syntastic_terraform_tffilter_plan = 1
+" (Optional) Default: 0, enable(1)/disable(0) plugin's keymapping
+let g:terraform_completion_keys = 1
